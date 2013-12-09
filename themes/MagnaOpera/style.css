@@ -12,6 +12,10 @@
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 
+body {
+	background-color: #FFF;
+}
+
 .navcontainer {
 	height: inherit !important;
 	background: transparent;
@@ -27,7 +31,7 @@
 }
 
 /* #Supersized Background
-================================================== */
+================================================== 
 
 ul#supersized li {
 	margin: 0;
@@ -90,11 +94,11 @@ img {
 #supersized.speed img {
 	-ms-interpolation-mode: nearest-neighbor;
 	image-rendering: -moz-crisp-edges;
-}	/*Speed*/
+}	
 #supersized.quality img {
 	-ms-interpolation-mode: bicubic;
 	image-rendering: optimizeQuality;
-}			/*Quality*/
+}			
 #supersized li {
 	display: block;
 	list-style: none;
@@ -133,3 +137,4 @@ img {
 #supersized li.prevslide img, #supersized li.activeslide img {
 	display: inline;
 }
+*/
