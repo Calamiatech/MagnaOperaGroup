@@ -11,3 +11,8 @@
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
+
+.navcontainer {
+	height: inherit !important;
+	background: transparent;
+}
