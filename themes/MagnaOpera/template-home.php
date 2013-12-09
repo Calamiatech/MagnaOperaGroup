@@ -61,8 +61,7 @@ Template Name: Homepage
 							get_homepage_info ($post->ID); //located in functions.php
 
 							/* #Display Post Featured Image and Captions
-							======================================================*/			
-							echo "// ".$home_display;					 
+							======================================================*/	
 							if ($home_display == 'Yes' && has_post_thumbnail()) { 
 							 
 								 // Full Size Image						 
@@ -97,9 +96,7 @@ Template Name: Homepage
 								 // Set thumbnail and URL
 								 $images .= "', thumb : '" . $thumb[0] . "', url : '" . $post_url . "'},"; 
 
-							 } else {
-							 	$images = $home_display;
-							 }
+							 } 
 
 						endwhile; // End the Loop ?>
 

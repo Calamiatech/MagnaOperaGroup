@@ -19,12 +19,57 @@ body {
 .navcontainer {
 	height: inherit !important;
 	background: transparent;
-	z-index: 0;
+	left: 1%;
+	top: 4%;
+	box-shadow: none;
+	padding: 0 20px 20px 20px;
+	z-index: 999;
+	/*z-index: 0;*/
+}
+.logo {
+	z-index: 9999;
+	position: fixed;
+}
+.navigation {
+	overflow: hidden;
+	position: fixed;
+	top: 15%;
+	height: 80%;
+	z-index: 1001;
+	left: 45px;
+}
+
+.nav {
+	background: white;
+	padding: 50% 0px 0px 0px;
+	position: relative;
+	top: 0px;
+}
+.sf-menu{
+	top: 0px;
+	left: 0px;
+	width: 128px;
+	float: none;
+	margin-right: 0px;
+	z-index: 99999;
+	position: relative;
+}
+.sf-menu li {
+	left: 0px;
+	float: none;
+	position: relative;
+}
+
+.sf-vertical, .sf-vertical li {
+	background: white;
+	width: 100%;
+	padding: 5px 0px 5px 15%;
+	margin: 0 auto;	
 }
 
 .mainbody {
 	margin-left: 0px;
-	padding-left: 220px;
+	/*padding-left: 220px;*/
 }
 
 .lines, .linesmobile {
