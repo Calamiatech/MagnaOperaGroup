@@ -22,6 +22,10 @@
 	padding-left: 220px;
 }
 
+.lines {
+	display: none;
+}
+
 /* #Supersized Background
 ================================================== */
 
