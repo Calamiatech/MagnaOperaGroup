@@ -61,7 +61,8 @@ Template Name: Homepage
 							get_homepage_info ($post->ID); //located in functions.php
 
 							/* #Display Post Featured Image and Captions
-							======================================================*/								 
+							======================================================*/			
+							echo "// ".$home_display;					 
 							if ($home_display == 'Yes' && has_post_thumbnail()) { 
 							 
 								 // Full Size Image						 
@@ -115,6 +116,7 @@ Template Name: Homepage
 				});
 		    });
 </script>
+<!-- THIS SHOULD BE WORKING IF THE TEMPLATE HEIRARCHY WORKS!! -->
 <!-- End Fullscreen Slider -->  
      
 <?php ag_loophide($ag_loopcounter); //Hide Controls if Only 1 Slide. Located in functions.php?>

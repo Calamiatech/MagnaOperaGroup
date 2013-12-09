@@ -19,6 +19,7 @@ body {
 .navcontainer {
 	height: inherit !important;
 	background: transparent;
+	z-index: 0;
 }
 
 .mainbody {
