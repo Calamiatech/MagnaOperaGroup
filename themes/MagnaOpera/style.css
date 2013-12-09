@@ -22,7 +22,7 @@
 	padding-left: 220px;
 }
 
-.lines {
+.lines, .linesmobile {
 	display: none;
 }
 
