@@ -420,8 +420,10 @@ jQuery(function($) {
     $buttondisplay = $('#top_panel_button').css('display');
     
     if ($buttondisplay = 'none') { 
+        $(".mobilelogo").removeClass("rolledup");
     	$('#toggle_button').addClass('downarrow').removeClass('uparrow'); } 
     else {
+        $(".mobilelogo").addClass("rolledup");
     	$('#toggle_button').addClass('uparrow').removeClass('downarrow'); }
 
 	$('#top_panel_button').click(function() {
@@ -429,6 +431,7 @@ jQuery(function($) {
 		var windowHeight = $(window).height();
 		var scrollPos = docHeight - windowHeight + height;
 		$('#top_panel_content').animate({ height: "toggle"}, 500, 'easeOutCubic');
+        $(".mobilelogo").toggleClass("rolledup");
         $('#toggle_button').toggleClass("downarrow").toggleClass("uparrow");
         jQuery('#top_panel').removeClass('active');
 					jQuery(this).addClass('active');
@@ -440,6 +443,7 @@ jQuery(function($) {
 jQuery(function($) {
 $(window).load(function() {
 		$('.home #top_panel_content').delay(1500).animate({ height: "toggle"}, 500, 'easeOutCubic', function(){
+                    $(".mobilelogo").toggleClass("rolledup");
         	        $('#toggle_button').toggleClass("downarrow").toggleClass("uparrow");
         			$('#top_panel').removeClass('active');
 					$(this).addClass('active');

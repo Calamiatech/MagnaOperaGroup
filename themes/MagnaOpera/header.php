@@ -45,6 +45,10 @@ $browser = $_SERVER['HTTP_USER_AGENT'];
 
 	?>
 </title>
+<!-- Embed Typekit Web Fonts -->
+<script type="text/javascript" src="//use.typekit.net/uwh4uys.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 <!-- Embed Google Web Fonts Via API -->
 <script type="text/javascript">
       WebFontConfig = {
@@ -271,7 +275,7 @@ else : ?>
         <div id="toggle_button" class="uparrow"></div>
     </div>
     <!--Toggle Button -->
-    <div class="mobilelogo">
+    <div class="mobilelogo rolleddown">
             <h1 class="aligncenter">
                 <a href="<?php echo home_url(); ?>">
                     <?php if ( $logo = of_get_option('of_logo') ) { ?>
