@@ -45,6 +45,16 @@ body {
 	padding: 50% 0px 0px 0px;
 	position: relative;
 	top: 0px;
+	-animation: hidenav .5s ease-in;
+	-webkit-animation: hidenav .5s ease-in;
+	-animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+}
+.navcontainer:hover .nav {
+	-animation: shownav .5s ease-out;
+	-webkit-animation: shownav .5s ease-out;
+	-animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
 }
 .sf-menu{
 	top: 0px;
@@ -79,6 +89,47 @@ body {
 
 .lines, .linesmobile {
 	display: none;
+}
+
+/* ANIMATIONS */
+@keyframes hidenav
+{
+	0%   {
+		top: 0%;
+		border-radius: 2%;
+	}
+	100% {
+		top: -30%;
+		border-radius: 50%;
+	}
+}
+
+@-webkit-keyframes hidenav /* Safari and Chrome */
+{
+	0%   {
+		top: 0%;
+		border-radius: 2%;
+	}
+	100% {
+		top: -30%;
+		border-radius: 50%;
+	}
+}
+
+@keyframes shownav
+{
+	0%   {top: -30%;
+		border-radius: 50%;}
+	100% {top: 0%;
+		border-radius: 2%;}
+}
+
+@-webkit-keyframes shownav /* Safari and Chrome */
+{
+	0%   {top: -30%;
+		border-radius: 50%;}
+	100% {top: 0%;
+		border-radius: 2%;}
 }
 
 /* #Supersized Background
