@@ -96,6 +96,8 @@ $browser = $_SERVER['HTTP_USER_AGENT'];
       })();
     </script>
 <!-- Embed Google Web Fonts Via API -->
+<!-- FontAwesome is Awesome! -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <!-- Skin-->
 <link href="<?php echo get_template_directory_uri(); ?>/css/light.css" rel="stylesheet" type="text/css" media="all" />
 <!--Skin -->
@@ -158,7 +160,7 @@ else : ?>
                 </ul>
             <?php } ?>
         </div>
-        <div class="menuarrow"><span class="arrow">&gt;</span></div>
+        <div class="menuarrow"><span class="arrow"><i class="fa fa-chevron-down"></i></span></div>
     </div>
     <div class="clear"></div>
     
