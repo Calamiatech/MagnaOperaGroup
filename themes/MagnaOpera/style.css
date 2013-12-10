@@ -16,8 +16,12 @@ body {
 	/*background-color: #FFF;*/
 }
 
+.navhandle { 
+	display: none;
+}
+
 .navcontainer {
-	height: inherit !important;
+	height: inherit;
 	background: transparent;
 	left: 1%;
 	top: 4%;
@@ -26,19 +30,25 @@ body {
 	z-index: 999;
 	/*z-index: 0;*/
 }
+
 .logo {
 	z-index: 9999;
 	position: relative;
 }
+.home .logo h1 {
+	position: relative;
+	top: -1px;
+}
 .navigation {
 	overflow: hidden;
 	position: relative;
-	top: -10%;
+	top: -104px;
 	height: 80%;
 	z-index: 1001;
 	left: 0px;
 	padding: 0px 20px;
 }
+
 
 .nav {
 	background: white;
@@ -188,26 +198,26 @@ body {
 
 @keyframes showarrow
 {
-	0%   {top: -201px;}
+	0%   {top: -156px;}
 	100% {top: -12px;}
 }
 
 @-webkit-keyframes showarrow /* Safari and Chrome */
 {
-	0%   {top: -201px;}
+	0%   {top: -156px;}
 	100% {top: -12px;}
 }
 
 @keyframes hidearrow
 {
 	0% {top: -12px;}
-	100%   {top: -201px;}
+	100%   {top: -156px;}
 }
 
 @-webkit-keyframes hidearrow /* Safari and Chrome */
 {
 	0% {top: -12px;}
-	100%   {top: -201px;}
+	100%   {top: -156px;}
 }
 
 @keyframes turnarrowdown
@@ -390,3 +400,17 @@ img {
 	display: inline;
 }
 */
+
+
+
+/************************************************************************
+
+MOBILE STYLES
+
+************************************************************************/
+
+@media only screen and (max-width: 767px) {
+	.navcontainer {
+		height: auto !important;
+	}
+}
