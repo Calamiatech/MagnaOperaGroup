@@ -251,23 +251,11 @@ else : ?>
 
 <div id="top_panel" class="mobilenavcontainer">
     <div id="top_panel_content">
-        <div class="mobilelogo">
-            <h1 class="aligncenter">
-            	<a href="<?php echo home_url(); ?>">
-					<?php if ( $logo = of_get_option('of_logo') ) { ?>
-                    <img src="<?php echo $logo; ?>" alt="<?php bloginfo( 'name' ); ?>" class="scale-with-grid" />
-                    <?php } else { bloginfo( 'name' );} ?>
-                </a> 
-             </h1>
-        </div>
+        
           <div class="clear"></div>
-               <?php $menutext = of_get_option('of_menu_text');
-			   if ($menutext == ''){ $menutext = 'Select a Page'; } ?>
-       <a id="jump" href="#mobilenav"><?php echo  $menutext; ?></a>
-       <div class="clear"></div>
         <div class="mobilenavigation">
         <?php if ( has_nav_menu( 'top_nav_menu' ) ) { /* if menu location 'Top Navigation Menu' exists then use custom menu */ ?>
-                <?php wp_nav_menu( array('menu' => 'Top Navigation Menu', 'theme_location' => 'top_nav_menu', 'items_wrap' => '<ul id="mobilenav"><li id="back"><a href="#top">'. __('Hide Navigation', 'framework') . '</a></li>%3$s</ul>')); ?>
+                <?php wp_nav_menu( array('menu' => 'Top Navigation Menu', 'theme_location' => 'top_nav_menu', 'items_wrap' => '<ul id="mobilenav">%3$s</ul>')); ?>
             <?php } else { /* else use wp_list_pages */?>
                 <ul class="sf-menu sf-vertical">
                     <?php wp_list_pages( array('title_li' => '','sort_column' => 'menu_order', )); ?>
@@ -283,7 +271,15 @@ else : ?>
         <div id="toggle_button" class="uparrow"></div>
     </div>
     <!--Toggle Button -->
-    
+    <div class="mobilelogo">
+            <h1 class="aligncenter">
+                <a href="<?php echo home_url(); ?>">
+                    <?php if ( $logo = of_get_option('of_logo') ) { ?>
+                    <img src="<?php echo $logo; ?>" alt="<?php bloginfo( 'name' ); ?>" class="scale-with-grid" />
+                    <?php } else { bloginfo( 'name' );} ?>
+                </a> 
+             </h1>
+        </div>
     <div class="clear"></div>
 </div> 
 </div>

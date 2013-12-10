@@ -223,7 +223,7 @@ jQuery(function($) {
     
     function hover_overlay_images() {
         
-        jQuery('a img').not('.portfolioitem a img').hover( function() {
+        jQuery('a img').not('.portfolioitem a img').not(".logo a img").not(".mobilelogo a img").hover( function() {
             jQuery(this).stop().animate({opacity : 0.7}, 500);
         }, function() {
             jQuery(this).stop().animate({opacity : 1}, 500);

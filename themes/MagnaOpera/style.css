@@ -155,7 +155,13 @@ body {
 	display: none;
 }
 
-/* ANIMATIONS */
+
+
+/*************************************************************************
+
+ANIMATIONS 
+
+*************************************************************************/
 @keyframes hidenav
 {
 	0%   {
@@ -413,4 +419,88 @@ MOBILE STYLES
 	.navcontainer {
 		height: auto !important;
 	}
+	.contentwrap {
+		padding: 67px 25px 15px 25px;
+	}
+}
+
+#top_panel {
+	background: transparent;
+}
+#top_panel_button {
+	padding-top: 1px;
+	position: relative;
+}
+#mobilenav a {
+	-moz-transition: height .25s, line-height .25s, background .25s, visibility .25s;
+	-ms-transition: height .25s, line-height .25s, background .25s, visibility .25s;
+	-o-transition: height .25s, line-height .25s, background .25s, visibility .25s;
+	-webkit-transition: height .25s, line-height .25s, background .25s, visibility .25s;
+	transition: height .25s, line-height .25s, background .25s, visibility .25s;
+}
+#mobilenav li li a, #mobilenav li li li a{
+	padding-left:20px;	
+}
+#mobilenav a{
+	border-bottom-width:1px;
+	height:20px;
+	padding:9px 5px 5px 5px;
+}
+#mobilenav {
+  /* unless it&rsquo;s showing */
+    z-index: 1001;
+	background: white;
+	padding: 1px 0px;
+}
+#mobilenav a, #mobilenav a:hover {
+   /* make nav links sit up a level */
+    position: relative;
+    z-index: 1;
+	text-transform: uppercase;
+	color: #492F91;
+	background: lightgrey;
+	margin: 5px 0px;
+}
+#mobilenav #back a{
+	border-width:1px;
+	height:auto;
+	padding: 10px;
+	margin-top: -38px;
+}
+
+.mobilenavigation { 
+	padding-bottom: 0px;
+	margin-bottom: -5px;
+}
+.mobilelogo {
+	transform: scale(.65);
+	-ms-transform: scale(.65);
+	-webkit-transform: scale(.65);
+	position: absolute;
+	top: 104px;
+	left: 22px;
+}
+
+#toggle_button {
+	background-color: transparent !important;
+}
+
+#toggle_button.downarrow, #toggle_button.uparrow {
+	margin-top: -15px;
+	padding-bottom: 10px;
+	z-index: 1;
+	background-color: transparent !important;
+}
+
+#toggle_button.downarrow {
+	background-image: url(/wp-content/themes/bigformat/images/uparrow-dark.png), url(/wp-content/themes/MagnaOpera/images/diamond.png);
+	background-position: 19px 39px, 0% 33px;
+	background-repeat: no-repeat, no-repeat;
+}
+
+#toggle_button.uparrow {
+	margin-top: 145px !important;
+	background-image: url(http://dev.magnaoperagroup.com/wp-content/themes/bigformat/images/downarrow-dark.png), url(/wp-content/themes/MagnaOpera/images/diamond.png);
+	background-position: 19px 9px, 0% -26px;
+	background-repeat: no-repeat, no-repeat;
 }
