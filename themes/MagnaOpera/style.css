@@ -16,6 +16,10 @@ body {
 	/*background-color: #FFF;*/
 }
 
+h3 {
+	margin: 25px 0 0 0;
+}
+
 .navhandle { 
 	display: none;
 }
@@ -165,14 +169,26 @@ body {
 	display: none;
 }
 
-#slidecaption .Center.Bottom {
+.home #prevslide {
+	left: 15px;
+}
+
+#slidecaption .Center {
 	position: absolute;
 	width: 596px;
-	bottom: 85px;
-	top: auto;
+	bottom: 85px !important;
+	top: auto !important;
 	left: 50%;
 	margin-left: -298px;
 	text-align: center;
+}
+
+#slidecaption .Dark h2 {
+	color: white;
+	background: rgba(0,0,0,.75);
+	box-shadow: 12px 0 0 rgba(0,0,0,.75), -12px 0 0 rgba(0,0,0,.75);
+	-moz-box-shadow: 12px 0 0 rgba(0,0,0,.75), -12px 0 0 rgba(0,0,0,.75);
+	-webkit-box-shadow: 12px 0 0 rgba(0,0,0,.75), -12px 0 0 rgba(0,0,0,.75);
 }
 
 ul#slide-list li {
@@ -196,6 +212,9 @@ ul#slide-list li.current-slide a {
 	border: 1px solid black;
 }
 
+body.single-portfolio {
+	background: #FFF;
+}
 .single-portfolio .contentarea {
 	position: absolute;
 	width: 100%;
@@ -289,12 +308,56 @@ ul#slide-list li.current-slide a {
 	padding: 0px 0px 50px 0px;
 }
 
+body.page-template-template-projects-php {
+	background: #000;
+}
 .page-template-template-projects-php .contentarea {
 	overflow: visible;
+	position: relative;
+	top: 60px;
 }
-
 #portfoliocontainer.mobile {
 	display: none;
+}
+.desktop .portfoliowrap {
+	width: 75%;
+	margin: 0 auto;
+}
+
+.desktop .portfoliolistitem {
+	position: relative;
+	background: rgba(0,0,0,.75);
+	height: 200px;
+	width: 80%;
+	margin: 0 0 25px 0;
+}
+.desktop .portfoliolistitem img {
+	height: 160px !important;
+	margin: 20px;
+}
+#desktopportfoliocontainer .portfoliolistitem:hover img {
+border: 3px solid white;
+box-sizing: border-box;
+}
+.desktop .portfoliolistitem .titlecontainer {
+	position: absolute;
+	top: 50px;
+	color: white;
+	left: 270px;
+}
+.desktop .portfoliolistitem .titlecontainer h1 {
+	padding: 0;
+	margin: 0;
+	font-size: 5em;
+	color: white;
+	margin: 0;
+	position: relative;
+	top: 24px;
+}
+.desktop .portfoliolistitem .titlecontainer p {
+	font-size: 34px !important;
+	padding: 0;
+	margin: 0;
 }
 
 /*************************************************************************
@@ -468,7 +531,7 @@ FONTS!
 
 *************************************************/
 
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, h1 a, h2 a, h3 a, h4 a, h5 a, p {
   font-family: "adobe-caslon-pro",serif !important;
 }
 
@@ -606,6 +669,11 @@ MOBILE STYLES
 	.navcontainer {
 		height: auto !important;
 	}
+	.contentarea {
+		position: static !important;
+		width: auto !important;
+		margin: auto !important;
+	}
 	.contentwrap {
 		padding: 25px 25px 15px 25px;
 	}
@@ -720,9 +788,29 @@ MOBILE STYLES
 	#portfoliocontainer.mobile {
 		display: block;
 	}
-
-	#portfoliocontainer.desktop {
-		display: none;
+	.portfoliowrap {
+		margin: 165px 0 0 0;
+	}
+	.portfolio h4 a { font-family: "adobe-caslon-pro", serif; text-transform: uppercase;}
+	.projectcontent {
+		width: 100% !important;
+	}
+	.desktop {
+		display: none !important;
+	}
+	.wmuSliderPagination {
+		z-index: 2;
+		position: absolute;
+		right: auto;
+		text-align: center;
+		width: 100%;
+		top: 240px;
+	}
+	.wmuSliderPagination li {
+		float: none;
+		display: inline-block;
+		margin: 0 5px 0 0;
+		list-style-type: none;
 	}
 }
 

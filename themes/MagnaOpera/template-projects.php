@@ -55,8 +55,9 @@ ag_fullscreen_bg($pageimage[0]);
     
 <?php endwhile; endif;?>
 
+
 <!-- Project Container -->
-<div id="portfoliocontainer" class="desktop">
+<div id="portfoliocontainer" class="mobile">
 
 <?php  
 /* #Grab the global ProperPagination and WP_Query instances
@@ -124,8 +125,9 @@ while ( $wp_query->have_posts() ) : $wp_query->the_post();
   </div>
 <!-- End Project Container -->   
 
+
 <!-- Project Container -->
-<div id="portfoliocontainer" class="mobile">
+<div id="desktopportfoliocontainer" class="desktop">
 
 <?php  
 /* #Grab the global ProperPagination and WP_Query instances
@@ -155,32 +157,16 @@ while ( $wp_query->have_posts() ) : $wp_query->the_post();
 	if ($portfoliodisplay !== 'Yes') : ?>
     
     <!-- Portfolio Item -->
-    <div class="portfoliothumb <?php if ($terms) { foreach ($terms as $term) { echo strtolower(preg_replace('/\s+/', '-', $term->name)). ' '; } } ?>">     
-        <div class="blogpost portfolio">            
-			<div class="nopadding portfolioitem" id="project-<?php the_ID(); ?>">
-                <a href="<?php if($lightbox = of_get_option('of_project_lightbox')) { 
-					if ($lightbox == 'true'){ 
-						if ($video_url) { 
-							echo $video_url; 
-						} else { 
-						echo $full[0]; 
-						} 
-					} else { 
-					echo $post_url;} 
-					} else { 
-					echo $post_url;} ?>" data-url="<?php the_ID(); ?>" <?php if ($lightbox) { if($lightbox == 'true') { echo 'rel="prettyPhoto"'; }} ?>>
-                  <img src="<?php  echo $thumb[0]; ?>" alt="" class="scale-with-grid"/>
-                </a>
-				<div class="clear"></div>      
+    <div class="portfoliolistitem <?php if ($terms) { foreach ($terms as $term) { echo strtolower(preg_replace('/\s+/', '-', $term->name)). ' '; } } ?>">
+        <a href="<?php echo $post_url; ?>" data-url="<?php the_ID(); ?>">
+	    	<div class="imagecontainer">
+				<img src="<?php  echo $thumb[0]; ?>" alt="" class=""/>
 			</div>
-            
-            <h4><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h4>
-            <p><?php if ($terms != null) {$output = array(); foreach($terms as $term){ $termname = str_replace(' ', '-', $term->name); $output[] = '<a href="#" data-filter=".'.strtolower($termname).'" class="filtersort">'.$term->name.'</a>'; } echo implode(', ', $output);  }?></p>
- 			
-            <div class="clear"></div>
-		</div>
-        
-        <div class="clear"></div>      
+			<div class="titlecontainer">
+				<h1><?php the_title();?></h1>
+				<?php /*<p><?php if ($terms != null) {$output = array(); foreach($terms as $term){ $termname = str_replace(' ', '-', $term->name); $output[] = '<a href="#" data-filter=".'.strtolower($termname).'" class="filtersort">'.$term->name.'</a>'; } echo implode(', ', $output);  }?></p> */ ?>
+			</div>
+        </a>
 	</div>
     <!-- Portfolio Item -->
     
