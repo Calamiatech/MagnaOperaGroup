@@ -303,7 +303,7 @@ body, input, p, ul, ol, .button, .ui-tabs-vertical .ui-tabs-nav li a span.text,
 		}
 		
 		echo 'font-size:12px;';
-		echo 'font-family:"'. $pfont['face']. '", arial, sans-serif !important;';
+		echo 'font-family:"'. $pfont['face']. '", arial, sans-serif;';
 		echo 'text-transform:'. $pfont['style2']. ';';	
 		echo 'line-height: 150%;';
     } ?>

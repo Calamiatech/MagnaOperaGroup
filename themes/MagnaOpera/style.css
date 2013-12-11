@@ -24,7 +24,7 @@ body {
 	height: inherit;
 	background: transparent;
 	left: 1%;
-	top: 4%;
+	top: 40px;
 	box-shadow: none;
 	padding: 0 20px 20px 20px;
 	z-index: 999;
@@ -44,6 +44,7 @@ body {
 	position: relative;
 	top: -104px;
 	height: 80%;
+	max-height: 300px;
 	z-index: 1001;
 	left: 0px;
 	padding: 0px 20px;
@@ -174,6 +175,127 @@ body {
 	text-align: center;
 }
 
+ul#slide-list li {
+	width: auto;
+	height: auto;
+}
+ul#slide-list li a {
+	background: rgba(0,0,0,.5);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	height: 25px;
+	width: 25px;
+}
+
+ul#slide-list li a:hover {
+	border: 1px solid white;
+}
+
+ul#slide-list li.current-slide a {
+	background: rgba(255,255,255,.5);
+	border: 1px solid black;
+}
+
+.single-portfolio .contentarea {
+	position: absolute;
+	width: 100%;
+	overflow: visible;
+	top: 100%;
+	left: 0px;
+	background: black;
+}
+
+.single-portfolio .projectcontent {
+	width: 960px;
+	top: 0px;
+	background: white;
+	margin: 0 auto;
+	float: none;
+}
+
+.single-portfolio .projectcontent .container {
+	margin: 0px;
+}
+
+.single-portfolio .namecontainer.singleproject {
+}
+
+.single-portfolio .smallpage {
+	margin: 0px;
+	width: inherit;
+	float: none;
+}
+
+.singleproject.hidden {
+	display: none;
+}
+
+
+.namecontainer.singleproject {
+	position: absolute;
+	padding: 25px 25px 0px 25px;
+	top: -105px;
+	background: white;
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.singleproject .pagename {
+	min-height: inherit;
+	margin: 0px;
+}
+
+.singleproject .pagename h2 {
+	color: black;
+	font-size: 80px;
+	width: auto;
+	max-width: inherit;
+	line-height: 80px;
+	text-align: center;
+}
+
+#slidenav {
+	width: 100%;
+	position: absolute;
+	padding: 0px;
+	float: none;
+	top: -40px;
+	text-align: center;
+}
+
+.singleproject ul#slide-list {	
+    display:inline-block;
+    position: relative;
+	padding: 0px;
+	float: none;
+	top: 0px;
+	left: 0px;
+	right: auto;
+}
+
+.singleproject ul#slide-list li {
+
+}
+
+.projectcontent .socialicons {
+	margin: 0 auto;
+	width: 80px;
+	float: none;
+}
+
+.watermark {
+	text-align: center;
+	padding: 0px 0px 50px 0px;
+}
+
+.page-template-template-projects-php .contentarea {
+	overflow: visible;
+}
+
+#portfoliocontainer.mobile {
+	display: none;
+}
 
 /*************************************************************************
 
@@ -346,10 +468,13 @@ FONTS!
 
 *************************************************/
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, p {
   font-family: "adobe-caslon-pro",serif !important;
 }
 
+p { 
+	font-size: 20px !important;
+}
 .nav ul li a {
   font-family: "adobe-caslon-pro",serif !important;
   font-weight: bold;
@@ -362,6 +487,7 @@ h1, h2, h3, h4, h5 {
 
 /* #Supersized Background
 ================================================== 
+*/
 
 ul#supersized li {
 	margin: 0;
@@ -393,10 +519,10 @@ img {
 }
 #supersized {
 	display: block;
-	position: static;
+	position: absolute;
 	left: 0;
 	top: 0;
-	overflow: visible;
+	overflow: hidden;
 	z-index: -999;
 	height: 100%;
 	width: 100%;
@@ -467,7 +593,6 @@ img {
 #supersized li.prevslide img, #supersized li.activeslide img {
 	display: inline;
 }
-*/
 
 
 
@@ -494,104 +619,112 @@ MOBILE STYLES
 	.namecontainer.singleproject h2 {
 		font-size: 48px;
 	}
-}
-
-#top_panel {
+	#top_panel {
 	background: transparent;
-}
-#top_panel_button {
-	padding-top: 1px;
-	position: relative;
-}
-#mobilenav a {
-	-moz-transition: height .25s, line-height .25s, background .25s, visibility .25s;
-	-ms-transition: height .25s, line-height .25s, background .25s, visibility .25s;
-	-o-transition: height .25s, line-height .25s, background .25s, visibility .25s;
-	-webkit-transition: height .25s, line-height .25s, background .25s, visibility .25s;
-	transition: height .25s, line-height .25s, background .25s, visibility .25s;
-}
-#mobilenav li li a, #mobilenav li li li a{
-	padding-left:20px;	
-}
-#mobilenav {
-  /* unless it&rsquo;s showing */
-    z-index: 1001;
-	background: white;
-	padding: 1px 0px;
-}
-#mobilenav a, #mobilenav a:hover {
-   /* make nav links sit up a level */
-    position: relative;
-    z-index: 1;
-	text-transform: uppercase;
-	text-align: center;
-	color: #492F91;
-	background: lightgrey;
-	margin: 5px 0px;
-	font-family: "adobe-caslon-pro", serif;
-	font-weight: bold;
-	font-size: 24px;
-	border-bottom-width:1px;
-	height:20px;
-	padding:14px 5px 1px 5px;
-}
-#mobilenav #back a{
-	border-width:1px;
-	height:auto;
-	padding: 10px;
-	margin-top: -38px;
+	}
+	#top_panel_button {
+		padding-top: 1px;
+		position: relative;
+	}
+	#mobilenav a {
+		-moz-transition: height .25s, line-height .25s, background .25s, visibility .25s;
+		-ms-transition: height .25s, line-height .25s, background .25s, visibility .25s;
+		-o-transition: height .25s, line-height .25s, background .25s, visibility .25s;
+		-webkit-transition: height .25s, line-height .25s, background .25s, visibility .25s;
+		transition: height .25s, line-height .25s, background .25s, visibility .25s;
+	}
+	#mobilenav li li a, #mobilenav li li li a{
+		padding-left:20px;	
+	}
+	#mobilenav {
+	  /* unless it&rsquo;s showing */
+	    z-index: 1001;
+		background: white;
+		padding: 1px 0px;
+	}
+	#mobilenav a, #mobilenav a:hover {
+	   /* make nav links sit up a level */
+	    position: relative;
+	    z-index: 1;
+		text-transform: uppercase;
+		text-align: center;
+		color: #492F91;
+		background: lightgrey;
+		margin: 5px 0px;
+		font-family: "adobe-caslon-pro", serif;
+		font-weight: bold;
+		font-size: 24px;
+		border-bottom-width:1px;
+		height:20px;
+		padding:14px 5px 1px 5px;
+	}
+	#mobilenav #back a{
+		border-width:1px;
+		height:auto;
+		padding: 10px;
+		margin-top: -38px;
+	}
+
+	.mobilenavigation { 
+		padding-bottom: 0px;
+		margin-bottom: -5px;
+	}
+	.mobilelogo {
+		transform: scale(.65);
+		-ms-transform: scale(.65);
+		-webkit-transform: scale(.65);
+		position: absolute;
+		top: 104px;
+		width: 100% !important;
+	}
+	.mobilelogo.rolledup {
+		top: -19px;
+		animation: rollup .45s cubic-bezier(0.3, 0.61, 0.4355, 1);
+		-webkit-animation: rollup .45s cubic-bezier(0.3, 0.61, 0.4355, 1);
+	}
+	.mobilelogo.rolleddown {
+		top: 104px;
+		animation: rolldown .45s cubic-bezier(0.3, 0.61, 0.4355, 1);
+		-webkit-animation: rolldown .45s cubic-bezier(0.3, 0.61, 0.4355, 1);
+	}
+
+	#toggle_button {
+		background-color: transparent !important;
+	}
+
+	#toggle_button.downarrow, #toggle_button.uparrow {
+		margin-top: -15px;
+		padding-bottom: 10px;
+		z-index: 1;
+		background-color: transparent !important;
+	}
+
+	#toggle_button.downarrow {
+		background-image: url(/wp-content/themes/bigformat/images/uparrow-dark.png), url(/wp-content/themes/MagnaOpera/images/diamond.png);
+		background-position: 19px 39px, 0% 35px;
+		background-repeat: no-repeat, no-repeat;
+	}
+
+	#toggle_button.uparrow {
+		margin-top: 145px !important;
+		background-image: url(http://dev.magnaoperagroup.com/wp-content/themes/bigformat/images/downarrow-dark.png), url(/wp-content/themes/MagnaOpera/images/diamond.png);
+		background-position: 19px 9px, 0% -26px;
+		background-repeat: no-repeat, no-repeat;
+	}
+
+	.namecontainer { 
+		padding: 166px 25px 1px 25px;
+		text-align: center;
+	}
+
+	#portfoliocontainer.mobile {
+		display: block;
+	}
+
+	#portfoliocontainer.desktop {
+		display: none;
+	}
 }
 
-.mobilenavigation { 
-	padding-bottom: 0px;
-	margin-bottom: -5px;
-}
-.mobilelogo {
-	transform: scale(.65);
-	-ms-transform: scale(.65);
-	-webkit-transform: scale(.65);
-	position: absolute;
-	top: 104px;
-	width: 100% !important;
-}
-.mobilelogo.rolledup {
-	top: -19px;
-	animation: rollup .45s cubic-bezier(0.3, 0.61, 0.4355, 1);
-	-webkit-animation: rollup .45s cubic-bezier(0.3, 0.61, 0.4355, 1);
-}
-.mobilelogo.rolleddown {
-	top: 104px;
-	animation: rolldown .45s cubic-bezier(0.3, 0.61, 0.4355, 1);
-	-webkit-animation: rolldown .45s cubic-bezier(0.3, 0.61, 0.4355, 1);
-}
-
-#toggle_button {
-	background-color: transparent !important;
-}
-
-#toggle_button.downarrow, #toggle_button.uparrow {
-	margin-top: -15px;
-	padding-bottom: 10px;
-	z-index: 1;
-	background-color: transparent !important;
-}
-
-#toggle_button.downarrow {
-	background-image: url(/wp-content/themes/bigformat/images/uparrow-dark.png), url(/wp-content/themes/MagnaOpera/images/diamond.png);
-	background-position: 19px 39px, 0% 35px;
-	background-repeat: no-repeat, no-repeat;
-}
-
-#toggle_button.uparrow {
-	margin-top: 145px !important;
-	background-image: url(http://dev.magnaoperagroup.com/wp-content/themes/bigformat/images/downarrow-dark.png), url(/wp-content/themes/MagnaOpera/images/diamond.png);
-	background-position: 19px 9px, 0% -26px;
-	background-repeat: no-repeat, no-repeat;
-}
-
-.namecontainer { 
-	padding: 166px 25px 1px 25px;
-	text-align: center;
-}
 
 

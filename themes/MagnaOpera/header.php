@@ -197,11 +197,13 @@ else : ?>
         </div>
     </div>
     
+    <?php if (!is_singular('portfolio')) : ?>
     <!--Slide Buttons in Upper Right Corner-->
     <ul id="slide-list"></ul>
     
     <div id="prevthumb"></div>
 	<div id="nextthumb"></div>
+    <?php endif; ?>
     
     <?php 
 	/* #If There is a Video

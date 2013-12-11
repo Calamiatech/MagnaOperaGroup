@@ -138,7 +138,7 @@ body, input, p, ul, ol, .button, .ui-tabs-vertical .ui-tabs-nav li a span.text,
 .contactsubmit label, .contactsubmit input[type=text], .contactsubmit textarea {
 
 
-font-style:normal;font-size:12px;font-family:"Droid Sans", arial, sans-serif !important;text-transform:none;line-height: 150%;}
+font-style:normal;font-size:12px;font-family:"Droid Sans", arial, sans-serif;text-transform:none;line-height: 150%;}
 
 
 /* #Slide Controls Option
