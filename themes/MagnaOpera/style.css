@@ -46,31 +46,32 @@ h3 {
 .navigation {
 	overflow: hidden;
 	position: relative;
-	top: -104px;
-	height: 80%;
+	top: -113px;
+	height: 21%;
+	width: 79px;
 	max-height: 300px;
 	z-index: 1001;
-	left: 0px;
-	padding: 0px 20px;
+	left: 7px;
+	padding: 0px 0px;
 }
 
 
 .nav {
-	background: white;
-	padding: 50% 0px 0px 0px;
+	background: rgba(0,0,0,.5);
+	padding: 83px 0px 0px 0px;
 	position: relative;
 	top: 0px;
-	-animation: hidenav .5s ease-in;
+	/*animation: hidenav .5s ease-in;
 	-webkit-animation: hidenav .5s ease-in;
 	-animation-fill-mode: both;
-	-webkit-animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;*/
 	text-align: center;
 }
 .navcontainer:hover .nav {
-	-animation: shownav .5s ease-out;
+	/*animation: shownav .5s ease-out;
 	-webkit-animation: shownav .5s ease-out;
 	-animation-fill-mode: both;
-	-webkit-animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;*/
 }
 .sf-menu{
 	top: 0px;
@@ -93,12 +94,15 @@ h3 {
 .sf-vertical, .sf-vertical li {
 	background: transparent;
 	width: 100%;
-	padding: 5px 0px;
+	padding: 7px 0px;
 	margin: 0 auto;	
+}
+.sf-vertical li:hover {
+	background: rgba(255,255,255,.5);
 }
 
 .sf-menu.sf-vertical a {
-	padding: 0.25em 1.1em;
+	padding: 0;
 }
 
 .menuarrow {
@@ -108,38 +112,37 @@ h3 {
 	transform: rotateZ(-45deg);
 	-ms-transform: rotateZ(-45deg); /* IE 9 */
 	-webkit-transform: rotateZ(-45deg); /* Safari and Chrome */
-	background: white;
-	height: 25px;
-	width: 25px;
+	
+	height: 11px;
+	width: 11px;
+	top: -8px;
 	/*top: -161px;*/
-	-animation: hidearrow .5s ease-out;
+	/*animation: hidearrow .5s ease-out;
 	-webkit-animation: hidearrow .5s ease-out;
 	-animation-fill-mode: both;
-	-webkit-animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;*/
 }
 .navcontainer:hover .menuarrow {
-	-animation: showarrow .45s ease-in;
+	/*animation: showarrow .45s ease-in;
 	-webkit-animation: showarrow .45s ease-in;
-	/*-animation-delay: .35s;
-	-webkit-animation-delay: .35s;*/
-	-animation-fill-mode: forwards;
-	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;*/
 
 }
 
 .menuarrow .arrow .fa {
 	position: relative;
-	top: 4px;
-	left: -3px;
-	font-size: 25px;
+	top: 1px;
+	left: -4px;
+	font-size: 14px;
+	color: #492F91;
 	transform: rotateZ(45deg);
 	-ms-transform: rotateZ(45deg); /* IE 9 */
 	-webkit-transform: rotateZ(45deg); /* Safari and Chrome */
-	animation: turnarrowdown .5s ease-out;
+	/*animation: turnarrowdown .5s ease-out;
 	-webkit-animation: turnarrowdown .5s ease-out;
-	-animation-fill-mode: both;
-	-webkit-animation-fill-mode: both;
-	color: #a096bc;
+	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;*/
 }
 
 .navcontainer:hover .menuarrow .arrow .fa {
@@ -150,10 +153,10 @@ h3 {
 	transform: rotateZ(225deg);
 	-ms-transform: rotateZ(225deg); /* IE 9 */
 	-webkit-transform: rotateZ(225deg); /* Safari and Chrome */ 
-	animation: turnarrowup .45s ease-out;
+	/*animation: turnarrowup .45s ease-out;
 	-webkit-animation: turnarrowup .45s ease-out;
-	-animation-fill-mode: both;
-	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;*/
 }
 
 .contentarea { 
@@ -199,8 +202,8 @@ ul#slide-list li a {
 	background: rgba(0,0,0,.5);
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	height: 25px;
-	width: 25px;
+	height: 15px;
+	width: 15px;
 }
 
 ul#slide-list li a:hover {
@@ -307,6 +310,12 @@ body.single-portfolio {
 	text-align: center;
 	padding: 0px 0px 50px 0px;
 }
+.watermark img {
+	tranform: scale(.5);
+	-ms-transform: scale(.5);
+	-webkit-transform: scale(.5);
+	-moz-transform: scale(.5);
+}
 
 body.page-template-template-projects-php {
 	background: #000;
@@ -327,32 +336,33 @@ body.page-template-template-projects-php {
 .desktop .portfoliolistitem {
 	position: relative;
 	background: rgba(0,0,0,.75);
-	height: 200px;
-	width: 80%;
-	margin: 0 0 25px 0;
+	height: 100px;
+	width: 40%;
+	margin: 0 auto 15px 160px;
 }
 .desktop .portfoliolistitem img {
-	height: 160px !important;
-	margin: 20px;
+	height: 80px !important;
+	margin: 10px;
 }
 #desktopportfoliocontainer .portfoliolistitem:hover img {
-border: 3px solid white;
-box-sizing: border-box;
+	border: 2px solid white;
+	box-sizing: border-box;
 }
+
 .desktop .portfoliolistitem .titlecontainer {
 	position: absolute;
-	top: 50px;
+	top: 42px;
 	color: white;
-	left: 270px;
+	left: 150px;
 }
 .desktop .portfoliolistitem .titlecontainer h1 {
 	padding: 0;
 	margin: 0;
-	font-size: 5em;
+	font-size: 3em;
 	color: white;
 	margin: 0;
 	position: relative;
-	top: 24px;
+	top: -3px;
 }
 .desktop .portfoliolistitem .titlecontainer p {
 	font-size: 34px !important;
@@ -525,6 +535,18 @@ ANIMATIONS
 	100%   {top: 104px;}
 }
 
+@keyframes pushcontentarea
+{
+	0% { padding-top: 0px;}
+	100%   {padding-top: 164px;}
+}
+
+@-webkit-keyframes pushcontentarea /* Safari and Chrome */
+{
+	0% { padding-top: 0px;}
+	100%   {padding-top: 164px;}
+}
+
 /*************************************************
 
 FONTS!
@@ -541,7 +563,7 @@ p {
 .nav ul li a {
   font-family: "adobe-caslon-pro",serif !important;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 12px;
 }
 
 #slidecaption h2, #homevideocaption h2 {
@@ -674,8 +696,19 @@ MOBILE STYLES
 		width: auto !important;
 		margin: auto !important;
 	}
+	.pushcontentarea {
+		animation: pushcontentarea .45s cubic-bezier(0.3, 0.61, 0.4355, 1);
+		-webkit-animation: pushcontentarea .45s cubic-bezier(0.3, 0.61, 0.4355, 1);
+		-animation-fill-mode: both;
+		-webkit-animation-fill-mode: both;
+	}
 	.contentwrap {
 		padding: 25px 25px 15px 25px;
+	}
+
+	.namecontainer { 
+		padding: 25px 25px 13px 25px;
+		text-align: center;
 	}
 	.namecontainer .pagename h2, .namecontainer .pagename h2 a {
 		font-size: 34px;
@@ -749,11 +782,15 @@ MOBILE STYLES
 		top: -19px;
 		animation: rollup .45s cubic-bezier(0.3, 0.61, 0.4355, 1);
 		-webkit-animation: rollup .45s cubic-bezier(0.3, 0.61, 0.4355, 1);
+		animation-fill-mode: both;
+		-webkit-animation-fill-mode: both;
 	}
 	.mobilelogo.rolleddown {
 		top: 104px;
 		animation: rolldown .45s cubic-bezier(0.3, 0.61, 0.4355, 1);
 		-webkit-animation: rolldown .45s cubic-bezier(0.3, 0.61, 0.4355, 1);
+		animation-fill-mode: both;
+		-webkit-animation-fill-mode: both;
 	}
 
 	#toggle_button {
@@ -780,10 +817,6 @@ MOBILE STYLES
 		background-repeat: no-repeat, no-repeat;
 	}
 
-	.namecontainer { 
-		padding: 166px 25px 1px 25px;
-		text-align: center;
-	}
 
 	#portfoliocontainer.mobile {
 		display: block;
@@ -804,13 +837,25 @@ MOBILE STYLES
 		right: auto;
 		text-align: center;
 		width: 100%;
-		top: 240px;
+		top: 222px;
 	}
 	.wmuSliderPagination li {
 		float: none;
 		display: inline-block;
 		margin: 0 5px 0 0;
 		list-style-type: none;
+	}
+	.wmuSliderPagination li a {
+		width: 20px;
+		height: 20px;
+		background: rgba(0,0,0,.5);
+	}
+	.wmuSliderPagination a.wmuActive {
+		background: rgba(255,255,255,.5);
+		border: 1px solid black;
+		box-sizing: border-box;
+		top: 1px;
+		position: relative;
 	}
 }
 

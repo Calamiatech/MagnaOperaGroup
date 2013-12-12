@@ -433,13 +433,17 @@ jQuery(function($) {
 
 jQuery(function($) {
 $(window).load(function() {
-		$('.home #top_panel_content').delay(1500).animate({ height: "toggle"}, 500, 'easeOutCubic', function(){
+		$('#top_panel_content').delay(1500).animate({ height: "toggle"}, 500, 'easeOutCubic', function(){
         	        $('#toggle_button').toggleClass("downarrow").toggleClass("uparrow");
         			$('#top_panel').removeClass('active');
 					$(this).addClass('active');
         });
-        $('.home #top_panel_content').delay(2500).animate({}, 500, 'easeOutCubic', function(){
+        $('#top_panel_content').delay(2500).animate({}, 500, 'easeOutCubic', function(){
                     $(".mobilelogo").addClass("rolledup").removeClass("rolleddown");
+        });
+
+        $('#top_panel_content').delay(3500).animate({}, 500, 'easeOutCubic', function(){
+                    $(".contentarea").not("body.page-template-template-projects-php .contentarea").addClass("pushcontentarea");
         });
 });
 });

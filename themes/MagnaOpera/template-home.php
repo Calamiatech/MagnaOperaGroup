@@ -27,7 +27,7 @@ Template Name: Homepage
 					stop_loop				:	0,			// Pauses slideshow on last slide
 					random					: 	0,			// Randomize slide order (Ignores start slide)
 					slide_interval          :   <?php echo of_get_option('of_homepage_autoplay_delay', '5'); ?>000,		// Length between transitions
-					transition              :   1, 			// 0-None, 1-Fade
+					transition              :   4, 			// 0-None, 1-Fade
 					transition_speed		:	1000,		// Speed of transition
 					new_window				:	0,			// Image links open in new window/tab
 					pause_hover             :   0,			// Pause slideshow on hover
@@ -85,7 +85,7 @@ Template Name: Homepage
 								 if ($sub_title !== '') { $images .= '<div class="subheadline"><span>' . $sub_title .'</span></div>';} 
 								 
 								 // Set title
-								 if ($title !== '') { $images .= '<div class="bgwrap"><h2><strong>' . $title . '</strong></h2></div>';} 
+								 if ($title !== '') { $images .= '<div class="bgwrap"><a href="'.$post_url.'"><h2><strong>' . $title . '</strong></h2></a></div>';} 
 								 
 								 // Set more button
 								 if($more_button) { if($optional_link) { $images .= '<div class="captionbutton"><a href="'.$optional_link.'" class="button">'.htmlspecialchars($more_button, ENT_QUOTES).'</a></div>'; } else {  $images .= '<div class="captionbutton"><a href="'.$post_url.'" class="button">'.htmlspecialchars($more_button, ENT_QUOTES).'</a></div>'; } } 
@@ -96,8 +96,8 @@ Template Name: Homepage
 								 // Set thumbnail and URL
 								 $images .= "', thumb : '" . $thumb[0] . "', url : '" . $post_url . "'},"; 
 
-							 } 
-
+							 }
+ 
 						endwhile; // End the Loop ?>
 
 						 <?php $images = rtrim($images, ','); 
