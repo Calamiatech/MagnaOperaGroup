@@ -164,7 +164,7 @@ else : ?>
                 </ul>
             <?php } ?>
         </div>
-        <div class="menuarrow"><span class="arrow"><i class="fa fa-chevron-down"></i></span></div>
+        <!-- <div class="menuarrow"><span class="arrow"><i class="fa fa-chevron-down"></i></span></div> -->
     </div>
     <div class="clear"></div>
     
@@ -199,7 +199,7 @@ else : ?>
     
     <?php if (!is_singular('portfolio')) : ?>
     <!--Slide Buttons in Upper Right Corner-->
-    <ul id="slide-list"></ul>
+    <?/*<ul id="slide-list"></ul>*/?>
     
     <div id="prevthumb"></div>
 	<div id="nextthumb"></div>

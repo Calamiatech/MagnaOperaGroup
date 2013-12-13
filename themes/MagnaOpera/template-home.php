@@ -27,7 +27,7 @@ Template Name: Homepage
 					stop_loop				:	0,			// Pauses slideshow on last slide
 					random					: 	0,			// Randomize slide order (Ignores start slide)
 					slide_interval          :   <?php echo of_get_option('of_homepage_autoplay_delay', '5'); ?>000,		// Length between transitions
-					transition              :   4, 			// 0-None, 1-Fade
+					transition              :   6, 			// 0-None, 1-Fade
 					transition_speed		:	1000,		// Speed of transition
 					new_window				:	0,			// Image links open in new window/tab
 					pause_hover             :   0,			// Pause slideshow on hover
@@ -120,6 +120,7 @@ Template Name: Homepage
         
 <!--Slide captions displayed here-->
 <div id="captioncontainer">
+	<div id="slidenav"><ul id="slide-list"></ul></div>
 	<div id="slidecaption"></div>
 </div>
 <!-- End slide captions -->            

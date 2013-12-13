@@ -38,11 +38,11 @@ else :  ?>
 				$.supersized({
 					slideshow               :   1,			// Slideshow on/off
 					autoplay				:	<?php echo of_get_option('of_portfolio_autoplay', '1'); ?>,		
-					start_slide             :   1,			// Start slide (0 is random)
+					start_slide             :   2,			// Start slide (0 is random)
 					stop_loop				:	0,			// Pauses slideshow on last slide
 					random					: 	0,			// Randomize slide order (Ignores start slide)
 					slide_interval          :   <?php echo of_get_option('of_portfolio_autoplay_delay', '5'); ?>000,		// Length between transitions
-					transition              :   4, 			// 0-None, 1-Fade
+					transition              :   6, 			// 0-None, 1-Fade
 					transition_speed		:	1000,		// Speed of transition
 					new_window				:	0,			// Image links open in new window/tab
 					pause_hover             :   0,			// Pause slideshow on hover
