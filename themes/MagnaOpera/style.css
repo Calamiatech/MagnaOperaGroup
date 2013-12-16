@@ -908,7 +908,7 @@ img {
 	left: 0;
 	top: 0;
 	overflow: hidden;
-	z-index: -999;
+	/* z-index: -999; */
 	height: 100%;
 	width: 100%;
 	margin:0;
@@ -1023,6 +1023,7 @@ MOBILE STYLES
 	}
 	.navcontainer {
 		height: auto !important;
+		display: none;
 	}
 	.contentarea {
 		position: static !important;
