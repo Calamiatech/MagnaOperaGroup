@@ -27,10 +27,15 @@
 
 <div class="videowrapper">
 <div id="ytapiplayer"></div>
+
+
 <?php 
+
 /*Get Video ID, Strip slashes out of url path */
 $video_url = parse_url($video_url, PHP_URL_PATH); $video_url = trim($video_url, '/'); ?>
-
+<script src="http://a.vimeocdn.com/js/froogaloop2.min.js" ></script>
+<iframe id="mainvideo" src="//player.vimeo.com/video/<?php echo $video_url ?>?portrait=0&color=333&badge=0&title=0&byline=0&api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<? /*
 <script type="text/javascript">
 		var flashvars = {
 			'clip_id': '<?php echo $video_url; ?>',
@@ -54,7 +59,7 @@ $video_url = parse_url($video_url, PHP_URL_PATH); $video_url = trim($video_url, 
 		attObj.id="vimeoplayer";
 		
 		swfobject.embedSWF("http://www.vimeo.com/moogaloop.swf", "ytapiplayer", "100%", "100%", "9.0.28", '',flashvars,parObj, attObj );
-</script>
+</script> */?>
 
 </div> 
 <!-- End Video Wrapper -->
