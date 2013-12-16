@@ -36,14 +36,13 @@ h1, h2, h3, h4, h5 {
 	transition: all 0.4s ease-in-out 0s;
 }
 .navcontainer:hover {
-	/* background-position-x: -344px; */
-	/* background-size: 167%; */
-	/* width: 400px; */
-	height: 20%;
-	min-height: 300px;
+	background-position-x: -344px;
+	background-size: 167%;
+	width: 400px;
+	height: 100%;
 }
 .navcontainer:after {
-	display: inherit;
+	display: block;
 	opacity: 0;
 	position: absolute;
 	right: 0%;
@@ -54,29 +53,21 @@ h1, h2, h3, h4, h5 {
 	background: url(/wp-content/themes/MagnaOpera/images/blackgradient.png);
 	background-size: 100% 100%;
 	transition: all 0.4s ease-in-out 0s;
-	pointer-events: none;
 }
 .navcontainer:hover:after {
 	opacity: 1;
-	right: -195%;
-	/* right: -620px; */
+	right: -50%;
 }
 
 .logo {
 	z-index: 9999;
-	top: -55px;
-	margin-left: -61px;  margin-bottom: -20px;
 	left: 0px;
 	position: relative;
-	-webkit-transform: scale(.5);
 	transition: all 0.4s ease-in-out 0s;
 }
 .home .logo h1 {
 	/*position: relative;
 	top: -1px;*/
-}
-.logo .mainPath {
-	filter: url(#dropshadow);
 }
 .navcontainer:hover .logo {
 	left: 25px;
@@ -84,7 +75,7 @@ h1, h2, h3, h4, h5 {
 .navigation {
 	overflow: hidden;
 	position: relative;
-	top: -171px;
+	top: -113px;
 	height: 21%;
 	width: 82px;
 	min-height: 200px;
@@ -95,7 +86,7 @@ h1, h2, h3, h4, h5 {
 	transition: all 0.4s ease-in-out 0s;
 }
 .navcontainer:hover .navigation {
-	left: 33px;
+	left: 31px;
 }
 
 /* Makes a perfect circle background. animate to this: */
@@ -164,8 +155,9 @@ h1, h2, h3, h4, h5 {
 	transition-delay: 0s;
 }
 .sf-menu li:hover a {
-	text-shadow: 0px 0px 5px rgba(255,255,240, .7);
+	text-shadow: 0px 0px 10px rgba(255,255,240, .7);
 	/* font-size: 13px; */
+	/* font-style: italic; */
 }
 /*.navcontainer:hover .sf-menu li:nth-child(1) {
 	transition-delay: 0s;
@@ -394,7 +386,7 @@ About and Contact Page Styles
 	/* margin: 0 auto; */	
 }
 .page-id-2 .namecontainer {
-	/* background: rgba(0,0,0,.5); */
+	background: rgba(0,0,0,.5);
 }
 
 .page-id-19 .namecontainer {
@@ -425,73 +417,6 @@ right: 0px;
 top: 0px;
 bottom: 0px;
 background: rgba(0,0,0,0.8);
-}
-/* Contact Page */
-.page-id-19 {
-	
-}
-.page-id-19 .mainbody {
-	padding-top: 15%;
-	height: 80%;
-}
-.page-id-19 .contentarea > .container {
-	margin: auto;
-}
-.page-id-19 .smallpage.content {
-	margin: auto;
-	float: none;
-}
-.contactsubmit label, .contactsubmit input[type=text], .contactsubmit textarea {
-	font-size: 18px !important;
-	margin: 0px 0px 10px 0px;
-}
-.contactsubmit label {
-	/* height: 32px; */
-	/* background: black; */
-	/* padding-top: 5px; */
-	padding-left: 11px;
-	/* padding-bottom: 0px; */
-	margin-bottom: 1px;
-	text-transform: uppercase !important;
-	font-size: 15px !important;
-}
-.contactsubmit input[type=submit], .contactsubmit input[type=text], .contactsubmit textarea {
-	border: 1px solid rgba(255,255,255,0.2);
-	color: #FFF;
-	box-shadow: 0 0 25px -5px rgba(255,255,244,.3);
-	transition: all 0.4s ease-in-out 0s;
-	padding-top: 13px;
-}
-.contactsubmit input[type=text], .contactsubmit textarea {
-	background-color: rgba(0,0,0,.25);
-	font-size: 15px !important;
-}
-.contactsubmit input[type=text]:focus, .contactsubmit textarea:focus, .contactsubmit input[type=submit]:hover {
-	border: 1px solid rgba(255,255,255,.8);
-	box-shadow: 0 0 36px -7px rgba(255,255,255,.7);
-	background-color: rgba(0,0,0,.9);
-}
-.contactsubmit input[type=submit] {
-	border: 1px solid rgba(255,255,255,.2);
-	background-color: rgba(0,0,0,.5);
-	text-transform: uppercase;
-	width: 100%;
-	font-size: 20px;
-	text-shadow: 0 0 3px rgba(255,255,244,.5);
-}
-.contactsubmit input[type=submit]:hover {
-    /* box-shadow: 0 0 22px -4px rgba(255,255,255,.7); */
-	
-}
-.emailsuccess, .emailfail {
-	background: rgba(0,0,0,.7);
-	box-shadow: 0 0 34px -7px rgba(255,255,255,.7);
-}
-.emailfail {
-	box-shadow: 0 0 34px -7px rgba(255,244,244,.7);
-}
-.emailsuccess h4, .emailfail h4 {
-	font-size: 24px !important;
 }
 
 /********************************************
@@ -623,28 +548,20 @@ body.page-template-template-projects-php {
 	background: rgba(0,0,0,.75);
 	height: 100px;
 	width: 80%;
-	top: 0px;
 	margin: 0 auto 15px auto;
-	transition: all 0.3s ease-in-out 0s;
-	box-sizing: content-box;
+	transition: all .4s ease-in-out 0s;
 }
 
 .desktop .portfoliolistitem.outlineglow {
 	box-shadow: 0px 0px 22px 2px rgba(255,255,244,.7);
 	background: rgba(0,0,0,0.5);
 }
-.desktop .portfoliolistitem.outlineglow:hover {
-	background: rgba(0,0,0,0.8);
-	box-shadow: 0px 0px 25px 6px rgba(255,255,250,0.8);
-	/* border: 1px solid white; */
-	/* top: -1px; */
-}
 .desktop .portfoliolistitem img {
 	height: 80px !important;
 	margin: 10px;
 }
 #desktopportfoliocontainer .portfoliolistitem:hover img {
-	/* border: 2px solid white; */
+	border: 2px solid white;
 	box-sizing: border-box;
 }
 
@@ -853,7 +770,7 @@ FONTS!
 
 *************************************************/
 
-h1, h2, h3, h4, h5, h1 a, h2 a, h3 a, h4 a, h5 a, p, body, input, p, ul, ol, .button, .ui-tabs-vertical .ui-tabs-nav li a span.text, .footer p, .footer ul, .footer ol, .footer.button, .credits p, .credits ul, .credits ol, .credits.button, textarea, .footer input, .testimonial p, .contactsubmit label, .contactsubmit input[type=text], .contactsubmit textarea {
+h1, h2, h3, h4, h5, h1 a, h2 a, h3 a, h4 a, h5 a, p {
   font-family: "adobe-caslon-pro",serif !important;
 }
 

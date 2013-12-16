@@ -135,7 +135,7 @@ while ( $wp_query->have_posts() ) : $wp_query->the_post();
 global $pp, $wp_query, $wp;
 
 $counter = 1; 
-if($projects = of_get_option('of_projects_number')) { $posts_per_page = $projects; }else { $posts_per_page = 8;}
+if($projects = of_get_option('of_projects_number')) { $posts_per_page = $projects; }else { $posts_per_page = -1;}
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 $wp_query = new WP_Query(array('post_type' => 'portfolio', 'posts_per_page'=> $posts_per_page, 'paged' => $paged)); // Construct the custom WP_Query instance
@@ -157,7 +157,7 @@ while ( $wp_query->have_posts() ) : $wp_query->the_post();
 	if ($portfoliodisplay !== 'Yes') : ?>
     
     <!-- Portfolio Item -->
-    <div class="portfoliolistitem <?php if ($terms) { foreach ($terms as $term) { echo strtolower(preg_replace('/\s+/', '-', $term->name)). ' '; } } ?>">
+    <div class="portfoliolistitem <?php if ($terms) { foreach ($terms as $term) { echo strtolower(preg_replace('/\s+/', '-', $term->name)). ' '; } } ?> outlineglow">
         <a href="<?php echo $post_url; ?>" data-url="<?php the_ID(); ?>">
 	    	<div class="imagecontainer">
 				<img src="<?php  echo $thumb[0]; ?>" alt="" class=""/>
