@@ -4,16 +4,16 @@
 <div class="lines vimeolines"></div>
 
    <?php if (have_posts()) : while (have_posts()) : the_post(); // Wordpress Loop
-   			
-			/* #Get Video URL, Fullscreen Background
-			======================================================*/
+            
+            /* #Get Video URL, Fullscreen Background
+            ======================================================*/
             $video_url = get_post_meta(get_the_ID(), 'ag_video_url', true); //Get the Video Link for the Post
-			$full = get_post_meta($post->ID,'_thumbnail_id',false); $full = wp_get_attachment_image_src($full[0], 'full', false);  // URL of Featured Full Image
-			ag_fullscreen_bg($full[0]); 
-			?>
+            $full = get_post_meta($post->ID,'_thumbnail_id',false); $full = wp_get_attachment_image_src($full[0], 'full', false);  // URL of Featured Full Image
+            ag_fullscreen_bg($full[0]); 
+            ?>
 
         <!-- Play Controls for Non-Flash Browsers -->
-        	<div id="captioncontainer">
+            <div id="captioncontainer">
                 <div id="videocaption">
                     <div class="Center caption">
                         <div class="bgwrap">
@@ -27,39 +27,34 @@
 
 <div class="videowrapper">
 <div id="ytapiplayer"></div>
-
-
 <?php 
-
 /*Get Video ID, Strip slashes out of url path */
 $video_url = parse_url($video_url, PHP_URL_PATH); $video_url = trim($video_url, '/'); ?>
-<script src="http://a.vimeocdn.com/js/froogaloop2.min.js" ></script>
-<iframe id="mainvideo" src="//player.vimeo.com/video/<?php echo $video_url ?>?portrait=0&color=333&badge=0&title=0&byline=0&api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<? /*
+
 <script type="text/javascript">
-		var flashvars = {
-			'clip_id': '<?php echo $video_url; ?>',
-			'server': 'vimeo.com',
-			'show_title': 0,
-			'show_byline': 0,
-			'show_portrait': 0,
-			'fullscreen': 1,
-			'js_api': 1
-			}
-		
-		var parObj = {
-			'swliveconnect':true,
-			'fullscreen': 1,
-			'allowscriptaccess': 'always',
-			'allowfullscreen':true,
-			'wmode': 'transparent'
-		};
-		
-		var attObj = {}
-		attObj.id="vimeoplayer";
-		
-		swfobject.embedSWF("http://www.vimeo.com/moogaloop.swf", "ytapiplayer", "100%", "100%", "9.0.28", '',flashvars,parObj, attObj );
-</script> */?>
+        var flashvars = {
+            'clip_id': '<?php echo $video_url; ?>',
+            'server': 'vimeo.com',
+            'title': 0,
+            'byline': 0,
+            'portrait': 0,
+            'fullscreen': 1,
+            'js_api': 1
+            }
+        
+        var parObj = {
+            'swliveconnect':true,
+            'fullscreen': 1,
+            'allowscriptaccess': 'always',
+            'allowfullscreen':true,
+            'wmode': 'transparent'
+        };
+        
+        var attObj = {}
+        attObj.id="vimeoplayer";
+        
+        swfobject.embedSWF("http://www.vimeo.com/moogaloop.swf", "ytapiplayer", "100%", "100%", "9.0.28", '',flashvars,parObj, attObj );
+</script>
 
 </div> 
 <!-- End Video Wrapper -->

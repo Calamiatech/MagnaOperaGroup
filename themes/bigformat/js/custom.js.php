@@ -204,7 +204,7 @@ jQuery(function($) {
 /*-----------------------------------------------------------------------------------*/
 
     function hover_overlay() {
-        
+        /*
          jQuery('.portfolioitem a img').each(function() {
        		 var $this = $(this);
         		$this.hover( function() {
@@ -214,10 +214,10 @@ jQuery(function($) {
                     jQuery($this).stop().animate({opacity : 1}, 500);
                     jQuery($this).parent().find('.thumbnailtitle').css('display', 'none');
                 });
-    	});
+    	}); */
     }
     
-    hover_overlay();
+    // hover_overlay();
 
        function hover_overlay_play() {
         
@@ -230,16 +230,16 @@ jQuery(function($) {
     
     hover_overlay_play();
     
-    function hover_overlay_images() {
+    // function hover_overlay_images() {
         
-        jQuery('a img').not('.portfolioitem a img').not(".logo a img").not(".mobilelogo a img").hover( function() {
-            jQuery(this).stop().animate({opacity : 0.7}, 500);
-        }, function() {
-            jQuery(this).stop().animate({opacity : 1}, 500);
-        });
-    }
+    //     jQuery('a img').not('.portfolioitem a img').not(".logo a img").not(".mobilelogo a img").not(".mobile img").hover( function() {
+    //         jQuery(this).stop().animate({opacity : 0.7}, 500);
+    //     }, function() {
+    //         jQuery(this).stop().animate({opacity : 1}, 500);
+    //     });
+    // }
     
-    hover_overlay_images();
+    // hover_overlay_images(); 
     
 
 /*-----------------------------------------------------------------------------------*/
@@ -248,7 +248,7 @@ jQuery(function($) {
 
 jQuery('.projectslideshow').wmuSlider({
     animation: 'fade',
-	animationDuration: 600,
+	animationDuration: 500,
 	slideshow: <?php if ($portautoplay = $data['of_portfolio_autoplay']) { echo $portautoplay; } else { echo 'true'; } ?>, 
 	slideshowSpeed: <?php if ($portautoplaydelay = $data['of_portfolio_autoplay_delay']) { echo $portautoplaydelay.'000'; } else { echo '7000'; } ?>,
 	slideToStart: 0,
@@ -544,7 +544,13 @@ jQuery(window).resize(function(){
  
  if(jQuery() .validate){ 	
 jQuery(document).ready(function(){
-	jQuery("#contactform").validate();
+	jQuery("#contactform").validate({
+        messages: {
+            c_email: "INVALID EMAIL",
+            c_name: "MISSING NAME",
+            c_message: "MESSAGE EMPTY"
+        }
+    });
 	jQuery("#quickform").validate();
     jQuery("#commentsubmit").validate();
 });   
@@ -971,6 +977,7 @@ jQuery('#portfoliocontainer').infinitescroll({
       jQuery('#portfoliocontainer').isotope( 'insert', $( newElements ), function(){
           jQuery('#portfoliocontainer').isotope('reLayout');
           
+          /*
            function hover_overlay_infinite() {
         
                  jQuery('.portfolioitem a img').each(function() {
@@ -983,9 +990,9 @@ jQuery('#portfoliocontainer').infinitescroll({
                             jQuery($this).parent().find('.thumbnailtitle').css('display', 'none');
                         });
                 });
-            }
+            }*/
     
-  		  hover_overlay_infinite();
+  		  //hover_overlay_infinite();
           
           	jQuery(function(){
 	   jQuery("a[rel^='prettyPhoto']").prettyPhoto({
@@ -1167,9 +1174,9 @@ if ((navigator.userAgent.match(/(iPad|iPhone);.*CPU.*OS 4_\d/i)))
   jQuery('.iphone #navscroll, .iphone #supersized li a, .iphone .lines').stop().animate({top : $topscroll}, 500);
 };
 }
-<?php if ($moreinfo = $data['of_more_info']) : 
+<?php /* if ($moreinfo = $data['of_more_info']) : 
 		if ($moreinfo == 'true') : ?> 
 			  jQuery(document).ready(function ($) { 
 				jQuery('.toggleproject').trigger("toggleProject");
 			  }); 
-		<?php endif; endif; ?>
+		<?php endif; endif; */?>

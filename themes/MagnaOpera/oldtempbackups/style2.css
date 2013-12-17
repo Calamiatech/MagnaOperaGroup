@@ -19,16 +19,6 @@ body {
 h1, h2, h3, h4, h5 {
 	margin: 25px 0 10px 0;
 }
-a, a:hover, a:visited, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, p a:hover, #footer h1 a:hover, #footer h2 a:hover, #footer h3 a:hover, #footer h3 a:hover, #footer h4 a:hover, #footer h5 a:hover, a:hover, #footer a:hover, .blogpost h2 a:hover, .blogpost .smalldetails a:hover {
-	color: #FFF !important;
-}
-a, h1 a, h2 a, h3 a, h4 a, h5 a, p a {
-	text-decoration: underline;
-}
-a:hover {
-	text-decoration: none;
-}
-
 
 .mobile {
 	display: none;
@@ -78,14 +68,11 @@ a:hover {
 
 .logo {
 	z-index: 9999;
-	top: -59px;
-	margin-left: -67px;  margin-bottom: -20px;
+	top: -55px;
+	margin-left: -61px;  margin-bottom: -20px;
 	left: 0px;
 	position: relative;
 	-webkit-transform: scale(.5);
-	-ms-transform: scale(.5);
-	-moz-transform: scale(.5);
-	transform: scale(.5);
 	transition: all 0.4s ease-in-out 0s;
 }
 .home .logo h1 {
@@ -101,7 +88,7 @@ a:hover {
 .navigation {
 	overflow: hidden;
 	position: relative;
-	top: -179px;
+	top: -171px;
 	height: 21%;
 	width: 82px;
 	min-height: 200px;
@@ -112,11 +99,7 @@ a:hover {
 	transition: all 0.4s ease-in-out 0s;
 }
 .navcontainer:hover .navigation {
-	left: 29px;
-}
-
-.navcontainer a:hover {
-	text-decoration: none;
+	left: 33px;
 }
 
 /* Makes a perfect circle background. animate to this: */
@@ -166,36 +149,6 @@ a:hover {
 	-webkit-animation: shownav .5s ease-out;
 	-animation-fill-mode: both;
 	-webkit-animation-fill-mode: both;*/
-}
-.playcontrols {
-	z-index: 99999;
-	position: absolute;
-}
-.home .playcontrols {
-    top: 0px;
-    right: 0px;
-    height: 50px;
-    width: 100px;
-}
-#slidecaption {
-	z-index: 9999 !important;
-}
-#prevslide, #nextslide {
-	z-index: 99999;
-	background-color: rgba(0,0,0,.7) !important;
-	height: 100px;
-	display: block;
-	width: 40px;
-}
-#prevslide {
-    left: 0px;
-	
-}
-#prevslide.fullopen {
-	display: block !important;
-}
-#nextslide {
-	right: 0px;
 }
 .sf-menu{
 	top: 0px;
@@ -337,7 +290,7 @@ a:hover {
 .mainbody {
 	margin-left: 0px;
 	height: 100%;
-	width: 100%;
+	width: 80%;
 	/*padding-left: 220px;*/
 	position: relative;
 	left: 0px;
@@ -352,18 +305,17 @@ a:hover {
 }
 
 .home #prevslide {
-	left: 0px;
+	left: 15px;
 }
 
 #slidecaption .Center {
 	position: absolute;
 	width: 100%;
-	bottom: 13%!important;
+	bottom: 85px !important;
 	top: auto !important;
 	left: auto;
 	margin-left: 17px;
 	text-align: center;
-	z-index: 999;
 }
 
 #slidecaption .Center h2 {
@@ -443,15 +395,10 @@ About and Contact Page Styles
 	background: url(http://dev.magnaoperagroup.com/wp-content/themes/MagnaOpera/images/WhiteBigMagnaOperaLogo.png) no-repeat;
 	height: 116px;
 	width: 283px;
-	margin: 0 auto !important;	
-	display: none;
+	/* margin: 0 auto; */	
 }
 .page-id-2 .namecontainer {
 	/* background: rgba(0,0,0,.5); */
-}
-
-.page-id-19 .contentwrap {
-	width: 80%;
 }
 
 .page-id-19 .namecontainer {
@@ -464,17 +411,6 @@ About and Contact Page Styles
 }
 .page-id-2 .smallpage.content {
 	width: 100%; 
-	position: relative;
-	left: 0px;
-	right: 0px;
-	margin: 0 auto;
-	/* text-align: center; */
-	margin-top: 30px;
-}
-.page-id-2 .contentwrap {
-	width: 60%;
-	padding-top: 15px;
-	margin: 0 auto;
 }
 .page-id-2 h1, .page-id-2 h2, .page-id-2 h3, .page-id-2 h4, .page-id-2 h5, .page-id-2 h6, .page-id-2 .smallpage.content p, .page-id-2 .smallpage.content {
 	text-shadow: 2px 2px 3px rgba(0,0,0,1), -2px -2px 3px rgba(0,0,0,1), 0px 0px 7px rgba(0,0,0,1);
@@ -494,19 +430,13 @@ top: 0px;
 bottom: 0px;
 background: rgba(0,0,0,0.8);
 }
-#aboutPageMagnaLogo {
-	transform: scale(.5);
-	-moz-transform: scale(.5);
-	-ms-transform: scale(.5);
-	-webkit-transform: scale(.5);
-}
 /* Contact Page */
 .page-id-19 {
 	
 }
 .page-id-19 .mainbody {
 	padding-top: 120px;
-	height: 100%;
+	height: 80%;
 }
 .page-id-19 .contentarea > .container {
 	margin: auto;
@@ -557,20 +487,15 @@ background: rgba(0,0,0,0.8);
     /* box-shadow: 0 0 22px -4px rgba(255,255,255,.7); */
 	
 }
-.emailsuccess + .contactcontent { display: none; }
 .emailsuccess, .emailfail {
 	background: rgba(0,0,0,.7);
-	text-align: center;
-	box-shadow: none;
-	border: none;
+	box-shadow: 0 0 34px -7px rgba(255,255,255,.7);
 }
 .emailfail {
 	box-shadow: 0 0 34px -7px rgba(255,244,244,.7);
 }
 .emailsuccess h4, .emailfail h4 {
 	font-size: 24px !important;
-	position: relative;
-	top: -6px;
 }
 
 /********************************************
@@ -590,15 +515,12 @@ body.single-portfolio {
 	left: 0px;
 	background: black;
 }
-.videowrapper + .contentarea {
-top: 90% !important;
-}
+
 .single-portfolio .projectcontent {
 	width: 80%;
-	top: 100%;
+	top: 0px;
 	background: white;
 	margin: 0 auto;
-	display: block !important;
 	float: none;
 }
 
@@ -704,8 +626,7 @@ body.page-template-template-projects-php {
 	position: relative;
 	background: rgba(0,0,0,.75);
 	height: 100px;
-	width: 60%;
-	min-width: 500px;
+	width: 80%;
 	top: 0px;
 	margin: 0 auto 15px auto;
 	transition: all 0.3s ease-in-out 0s;
@@ -991,7 +912,7 @@ img {
 	left: 0;
 	top: 0;
 	overflow: hidden;
-	/* z-index: initial; */
+	/* z-index: -999; */
 	height: 100%;
 	width: 100%;
 	margin:0;
@@ -1052,7 +973,7 @@ img {
 	z-index: -20;
 }
 #supersized li.activeslide {
-	/* z-index: -1; */
+	z-index: -10;
 }
 #supersized li.image-loading {
 	background: #111 url(./images/loading-dark.gif) no-repeat center center;
@@ -1080,17 +1001,16 @@ Override Slideshow plugin styles
 
 
 .videowrapper {
-	top: -9%;
+	top: -10%;
 	z-index: 1;
-	width: 100% !important;
-	height: 100%;
+	height: 110%;
 }
 
 #videocaption .bgwrap {
 	display: none;
 }
 .playvideocontrols {
-	/* display: none; */
+	display: none;
 }
 
 
@@ -1106,16 +1026,14 @@ MOBILE STYLES
 		display: none;
 	}
 	.mobile {
-		display: block;
+		display: block !important;
 	}
 	.contentarea {
-		/* position: static !important; */
+		position: static !important;
 		width: auto !important;
 		margin: auto !important;
 	
 		z-index: 999;
-		position: relative !important;
-		top: 0px;
 }
 	.pushcontentarea {
 		animation: pushcontentarea .45s cubic-bezier(0.3, 0.61, 0.4355, 1);
@@ -1146,7 +1064,7 @@ MOBILE STYLES
 		padding: 25px 25px 11px 25px;
 	}
 	.namecontainer.singleproject h2 {
-		font-size: 36px;
+		font-size: 48px;
 	}
 	.mainbody {
 		width: 100%;
@@ -1156,9 +1074,6 @@ MOBILE STYLES
 		/* background: rgba(0,0,0,.5); */
 		background: transparent;
 }
-.nav a:hover {
-    text-decoration: none;
-}
 	.navcontainer {
 		height: auto !important;
 		display: none;
@@ -1167,14 +1082,12 @@ MOBILE STYLES
 	    /* top: 25px !important; */
 	    height: 100px;
 	    padding: 0px;
-	    width: 50%;
 	    margin: 0px;
-	    position: absolute !important;
+	    position: fixed !important;
 	    top: 0px;
 	    left: 0px;
 	    z-index: 99998;
-	
-}
+	}
 	.mobilenavcontainer h1 {
 		padding: 0px;
 		margin: 0px;
@@ -1183,34 +1096,11 @@ MOBILE STYLES
 		display: block;
 		margin: 0px 0px 0px 0px !important;
 		margin-top: 0px !important;
-		left: -67px;
+		left: -30px;
 		position: absolute;
-		top: -90px;
-		-webkit-transform: scale(0.2);
-		-ms-transform: scale(.3);
-		-moz-transform: scale(.3);
-		transform: scale(.3);
+		top: -55px;
 		/* -webkit-transform: scale(0.4); */
-	
-		z-index: 9999999;
-}
-	#top_panel {
-	background: transparent;
 	}
-	#top_panel_button {
-		padding-top: 1px;
-		position: relative;
-	}
-	#prevslide, #nextslide {
-		position: relative;
-		background-color: rgba(0,0,0,0.5) !important;
-	
-		background-position-x: 8px;
-		background-position-y: 30px;
-		width: 36px;
-		height: 87px;
-}
-
 	.mobilenavigation { 
 		padding-bottom: 0px;
 		margin-bottom: -5px;
@@ -1255,16 +1145,9 @@ MOBILE STYLES
 		font-style: oblique;
 	}
 	.mobilenav .mobile.menu ul li h2:hover {
-	    border-bottom: 1px solid white;
-		
-	}
-	.mobilenav .mobile.menu a:hover {
-		text-decoration: none;
-	}
-
-	#captioncontainer, #videocaptioncontainer {
-		position: initial;
-	}
+    border-bottom: 1px solid white;
+	
+}
 
 	.about-contact-page {
 		z-index: 999999;
@@ -1301,11 +1184,6 @@ MOBILE STYLES
 	    margin-top: 0px !important;
 	    margin: 0 auto;
 	    position: relative;
-		
-	    -webkit-transform: scale(.3);
-		-ms-transform: scale(.3);
-		-moz-transform: scale(.3);
-		transform: scale(.3);
 	    /* -webkit-transform: scale(0.5); */
 	}
 	.about-contact-page .mobile.logo a {
@@ -1372,31 +1250,25 @@ MOBILE STYLES
 	.portfolio h4 a { font-family: "adobe-caslon-pro", serif; text-transform: uppercase;}
 	.projectcontent {
 		width: 100% !important;
-	
-		top: 105% !important;
-}
+	}
 	.portfoliolistitem {
 		height: 130px;
 		position: relative;
 		margin: 10px auto;
-	
 		padding: 15px;
 		box-sizing: border-box;
 		box-shadow: 0 0 22px -7px rgba(255,255,244,.7);
-}
+	}
 	#workcontainer.mobile .imagecontainer {
-    /* padding-left: 20px; */
-		
-	
-    display: inline-block;
-    margin: 0;
-    width: 128px;
-    height: 100px;
-    padding: 0px;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-}
+	    display: inline-block;
+	    margin: 0;
+	    width: 128px;
+	    height: 100px;
+	    padding: 0px;
+	    position: absolute;
+	    left: 15px;
+	    top: 15px;
+	}
 	#workcontainer.mobile .imagecontainer img {
 		height: 100px;
 	}
@@ -1408,8 +1280,6 @@ MOBILE STYLES
 }
 	#workcontainer.mobile .titlecontainer h1 {
     height: 100%;
-		
-	
     display: inline-block;
     vertical-align: middle;
     text-align: left;
@@ -1426,13 +1296,9 @@ MOBILE STYLES
 	#supersized {
 		visibility: visible !important;
 	
-		/* z-index: 1; */
+		z-index: -1;
 }
 
-#slidecaption {
-	
-		z-index: 99999;
-}
 	#slidecaption .bgwrap {
 		margin: 12px 0px 0px;
 	}
@@ -1441,12 +1307,8 @@ MOBILE STYLES
 		left: 0px;
 		margin: 0px;
 		text-align: center;
-		/* background: rgba(0,0,0,.9); */
-		/* padding: 12px 0 0; */
-	
-}
-	#slidecaption .Dark {
 		background: rgba(0,0,0,.9);
+		/* padding: 12px 0 0; */
 	}
 	#slidecaption .Center h2 {
 		padding: 0px !important;
@@ -1463,10 +1325,8 @@ MOBILE STYLES
 		right: auto;
 		text-align: center;
 		width: 100%;
-		top: 90%;
-	
-		/* bottom: 0px; */
-}
+		top: 222px;
+	}
 	.wmuSliderPagination li {
 		float: none;
 		display: inline-block;
@@ -1487,27 +1347,6 @@ MOBILE STYLES
 	}
 	.wmuSlider img {
 		width: 100%;
-	}
-	.wmuSliderPrev, .wmuSliderNext {
-		background-color: rgba(0,0,0,.5);
-	
-		position: absolute;
-		bottom: 0px;
-		right: 0px;
-		float: right;
-	}
-	.wmuSliderPrev {
-    /* right: 20px; */
-		
-	
-    /* position: absolute; */
-    /* float: right; */
-    /* position: relative; */
-    /* top: 100%; */
-    left: 0px;
-}
-	.single-portfolio .contentarea {
-		top: 0px;
 	}
 }
 

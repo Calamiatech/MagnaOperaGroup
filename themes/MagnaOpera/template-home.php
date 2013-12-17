@@ -5,15 +5,6 @@ Template Name: Homepage
 ?>
 <?php get_header(); ?>
 
-<!-- Mobile Fade Element -->
-<div class="bottomfade"><span></span></div>
-
-<!-- Mobile Lines (Also Used as play/stop in custom.js.php -->
-<div class="linesmobile"></div>
-
-<!-- Non-Mobile Lines Overlay -->
-<div class="lines"></div>
-
 <!-- Initialize Fullscreen Slider
 ================================================== -->
 <script type="text/javascript">

@@ -196,19 +196,19 @@ jQuery(function($) {
 
     function hover_overlay() {
         
-         jQuery('.portfolioitem a img').each(function() {
-       		 var $this = $(this);
-        		$this.hover( function() {
-        		    jQuery($this).stop().animate({opacity : 0.1}, 500);
-           			jQuery($this).parent().find('.thumbnailtitle').fadeIn('500');
-                }, function() {
-                    jQuery($this).stop().animate({opacity : 1}, 500);
-                    jQuery($this).parent().find('.thumbnailtitle').css('display', 'none');
-                });
-    	});
+     //     jQuery('.portfolioitem a img').each(function() {
+     //   		 var $this = $(this);
+     //    		$this.hover( function() {
+     //    		    jQuery($this).stop().animate({opacity : 0.1}, 500);
+     //       			jQuery($this).parent().find('.thumbnailtitle').fadeIn('500');
+     //            }, function() {
+     //                jQuery($this).stop().animate({opacity : 1}, 500);
+     //                jQuery($this).parent().find('.thumbnailtitle').css('display', 'none');
+     //            });
+    	// });
     }
     
-    hover_overlay();
+    // hover_overlay();
 
        function hover_overlay_play() {
         
@@ -223,7 +223,7 @@ jQuery(function($) {
     
     function hover_overlay_images() {
         
-        jQuery('a img').not('.portfolioitem a img').not(".logo a img").not(".mobilelogo a img").hover( function() {
+        jQuery('a img').not('.portfolioitem a img').not(".logo a img").not(".mobilelogo a img").not(".mobile img").hover( function() {
             jQuery(this).stop().animate({opacity : 0.7}, 500);
         }, function() {
             jQuery(this).stop().animate({opacity : 1}, 500);
@@ -450,7 +450,7 @@ $(window).load(function() {
 
 /*-----------------------------------------------------------------------------------*/
 /* Full Nav Drawer Drawer by Andre Gagnon
-/*-----------------------------------------------------------------------------------*/
+
  
   jQuery(function($) {
     
@@ -504,6 +504,8 @@ $(window).load(function() {
 	});
     
 });  
+/*-----------------------------------------------------------------------------------*/
+
 
 /*-----------------------------------------------------------------------------------*/
 /* FitVid Fluid Video
@@ -534,7 +536,13 @@ jQuery(window).resize(function(){
  
  if(jQuery() .validate){ 	
 jQuery(document).ready(function(){
-	jQuery("#contactform").validate();
+	jQuery("#contactform").validate({
+        messages: {
+            c_email: "INVALID EMAIL",
+            c_name: "MISSING NAME",
+            c_message: "MESSAGE EMPTY"
+        }
+    });
 	jQuery("#quickform").validate();
     jQuery("#commentsubmit").validate();
 });   
@@ -963,19 +971,19 @@ jQuery('#portfoliocontainer').infinitescroll({
           
            function hover_overlay_infinite() {
         
-                 jQuery('.portfolioitem a img').each(function() {
-                     var $this = $(this);
-                        $this.hover( function() {
-                            jQuery($this).stop().animate({opacity : 0.1}, 500);
-                            jQuery($this).parent().find('.thumbnailtitle').fadeIn('500');
-                        }, function() {
-                            jQuery($this).stop().animate({opacity : 1}, 500);
-                            jQuery($this).parent().find('.thumbnailtitle').css('display', 'none');
-                        });
-                });
+                //  jQuery('.portfolioitem a img').each(function() {
+                //      var $this = $(this);
+                //         $this.hover( function() {
+                //             jQuery($this).stop().animate({opacity : 0.1}, 500);
+                //             jQuery($this).parent().find('.thumbnailtitle').fadeIn('500');
+                //         }, function() {
+                //             jQuery($this).stop().animate({opacity : 1}, 500);
+                //             jQuery($this).parent().find('.thumbnailtitle').css('display', 'none');
+                //         });
+                // });
             }
     
-  		  hover_overlay_infinite();
+  		  //hover_overlay_infinite();
           
           	jQuery(function(){
 	   jQuery("a[rel^='prettyPhoto']").prettyPhoto({
