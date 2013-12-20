@@ -221,24 +221,24 @@ jQuery(function($) {
     
     hover_overlay_play();
     
-    function hover_overlay_images() {
+    // function hover_overlay_images() {
         
-        jQuery('a img').not('.portfolioitem a img').not(".logo a img").not(".mobilelogo a img").not(".mobile img").hover( function() {
-            jQuery(this).stop().animate({opacity : 0.7}, 500);
-        }, function() {
-            jQuery(this).stop().animate({opacity : 1}, 500);
-        });
-    }
+    //     jQuery('a img').not('.portfolioitem a img').not(".logo a img").not(".mobilelogo a img").not(".mobile img").hover( function() {
+    //         jQuery(this).stop().animate({opacity : 0.7}, 500);
+    //     }, function() {
+    //         jQuery(this).stop().animate({opacity : 1}, 500);
+    //     });
+    // }
     
-    hover_overlay_images();
+    // hover_overlay_images();
     
 
 /*-----------------------------------------------------------------------------------*/
 /* Portfolio Flexible Slider
 /*-----------------------------------------------------------------------------------*/
 
-jQuery('.projectslideshow').wmuSlider({
-    animation: 'fade',
+wmuSliderSlideshow = jQuery('.projectslideshow').wmuSlider({
+    animation: 'slide',
 	animationDuration: 600,
 	slideshow: true, 
 	slideshowSpeed: 7000,
@@ -247,7 +247,7 @@ jQuery('.projectslideshow').wmuSlider({
 	paginationControl: true,
 	previousText: 'Previous',
 	nextText: 'Next',
-	touch: Modernizr.touch,
+	touch: true,//Modernizr.touch,
 	slide: 'span'
 });
     

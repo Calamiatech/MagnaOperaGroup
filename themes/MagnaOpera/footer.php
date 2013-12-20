@@ -21,19 +21,23 @@
         </h1>
     </div>
 </div> 
-<div class="mobile about-contact-page hidden">
+<div class="mobile about-contact-page hidden" id="AboutOurWork">
     <div class="mobilenav">
         <div class="mobile logo"><a href="<?php echo home_url(); ?>" class="mobile">
             <?php include(get_stylesheet_directory() . "/images/m-logo.svg"); ?>
             </a>
         </div>
-        <div class="mobile close">
-            <a href="#close" >
-            </a>
-        </div>
+        <div class="closebuttonhitarea">
+	        <div class="mobile close">
+	            <a href="#close">
+	            </a>
+	        </div>
+	    </div>
         <div class="mobile menu">
             <ul>
-                <li><a id="MobiMenuLink" href="#work"><h2>See Our Work</h2></a></li>
+            	<li><a href="#about"><h2>About</h2></a></li>
+                <li><a href="#work"><h2>Work</h2></a></li>
+                <li><a href="mailto:info@magnaoperagroup.com"><h2>Contact</h2></a></li>
             </ul>
         </div>
     </div>

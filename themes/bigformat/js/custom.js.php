@@ -246,8 +246,8 @@ jQuery(function($) {
 /* Portfolio Flexible Slider
 /*-----------------------------------------------------------------------------------*/
 
-jQuery('.projectslideshow').wmuSlider({
-    animation: 'fade',
+wmuSliderSlideshow = jQuery('.projectslideshow').wmuSlider({
+    animation: 'slide',
 	animationDuration: 500,
 	slideshow: <?php if ($portautoplay = $data['of_portfolio_autoplay']) { echo $portautoplay; } else { echo 'true'; } ?>, 
 	slideshowSpeed: <?php if ($portautoplaydelay = $data['of_portfolio_autoplay_delay']) { echo $portautoplaydelay.'000'; } else { echo '7000'; } ?>,
@@ -256,7 +256,7 @@ jQuery('.projectslideshow').wmuSlider({
 	paginationControl: true,
 	previousText: 'Previous',
 	nextText: 'Next',
-	touch: Modernizr.touch,
+	touch: true,// Modernizr.touch,
 	slide: 'span'
 });
     

@@ -39,7 +39,8 @@ $video_url = parse_url($video_url, PHP_URL_PATH); $video_url = trim($video_url, 
 			'show_byline': 0,
 			'show_portrait': 0,
 			'fullscreen': 1,
-			'js_api': 1
+			'js_api': 1,
+            'color': 'FFFFFF'
 			}
 		
 		var parObj = {

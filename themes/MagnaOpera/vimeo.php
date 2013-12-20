@@ -17,7 +17,7 @@
                 <div id="videocaption">
                     <div class="Center caption">
                         <div class="bgwrap">
-                            <a href="<?php echo $video_url; ?>" rel="prettyPhoto" class="popupplay">Play</a>
+                            <a href="<?php echo $video_url; ?>?color=FFF&portrait=0&badge=0&autoplay=0&byline=0&title=0" rel="prettyPhoto" class="popupplay">Play</a>
                          </div>
                     </div>
                     <div class="clear"></div>
@@ -39,7 +39,8 @@ $video_url = parse_url($video_url, PHP_URL_PATH); $video_url = trim($video_url, 
             'byline': 0,
             'portrait': 0,
             'fullscreen': 1,
-            'js_api': 1
+            'js_api': 0,
+            'color': 'FFFFFF'
             }
         
         var parObj = {
@@ -79,7 +80,7 @@ $video_url = parse_url($video_url, PHP_URL_PATH); $video_url = trim($video_url, 
   ================================================== -->
 <div class="wmuSlider videoslide project-<?php the_ID(); ?>">
     <div class="wmuSliderWrapper">
-        <span><iframe id="iframeplayer" src="http://player.vimeo.com/video/<?php echo $video_url; ?>" frameborder="0"></iframe></span>
+        <span><iframe id="iframeplayer" src="http://player.vimeo.com/video/<?php echo $video_url; ?>?color=FFF&portrait=0&badge=0&autoplay=0&byline=0&title=0" frameborder="0"></iframe></span>
     </div>
 </div>
     
