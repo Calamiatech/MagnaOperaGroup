@@ -171,8 +171,8 @@ jQuery(function($) {
 			opacity: 0.80, /* Value between 0 and 1 */
 			show_title: false, /* true/false */
 			allow_resize: true, /* Resize the photos bigger than viewport. true/false */
-			default_width: 500,
-			default_height: 344,
+			default_width: window.innerWidth,
+			default_height: window.innerHeight,
 			counter_separator_label: '/', /* The separator for the gallery counter 1 "of" 2 */
 			theme: 'light_square', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
 			horizontal_padding: 20, /* The padding on each side of the picture */

@@ -1126,7 +1126,8 @@ PRETTY PHOTO
 ************************************************************************/
 
 .pp_overlay { opacity: .95 !important; }
-.pp_content { background-color: transparent;}
+.pp_content, .pp_middle, .pp_left, .pp_middle, .pp_right, .pp_content { background-color: transparent !important;}
+.pp_social, .pp_close, .pp_expand {display: none !important;}
 
 
 /************************************************************************
