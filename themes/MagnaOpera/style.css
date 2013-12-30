@@ -93,7 +93,7 @@ a:hover {
 	top: -1px;*/
 }
 .logo .mainPath {
-	filter: url(#dropshadow);
+	/*filter: url(#dropshadow);*/
 }
 .navcontainer:hover .logo {
 	left: 25px;
@@ -1353,6 +1353,7 @@ MOBILE STYLES
 	.about-contact-page .mobile.logo a svg {
 	    margin: 0 auto;
 	    width: 200px;
+	    filter: url("#dropshadow");
 	}
 	.mobile.close {
 		position: absolute;
