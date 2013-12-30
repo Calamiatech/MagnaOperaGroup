@@ -94,7 +94,6 @@
           <feOffset dx="0" dy="0" result="blur" />
           <feComposite in="SourceGraphic" in2="blur" operator="over"/>
      </filter>
-     <filter>
      <filter id="drop-shadow">
           <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
           <feOffset dx="0" dy="0" result="offsetblur"/>
