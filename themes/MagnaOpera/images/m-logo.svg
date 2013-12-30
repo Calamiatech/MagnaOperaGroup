@@ -94,4 +94,15 @@
           <feOffset dx="0" dy="0" result="blur" />
           <feComposite in="SourceGraphic" in2="blur" operator="over"/>
      </filter>
+     <filter>
+     <filter id="drop-shadow">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+          <feOffset dx="0" dy="0" result="offsetblur"/>
+          <feFlood flood-color="rgba(0,0,0,0.5)"/>
+          <feComposite in2="offsetblur" operator="in"/>
+          <feMerge>
+               <feMergeNode/>
+               <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+     </filter>
  </svg>
