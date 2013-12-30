@@ -88,6 +88,11 @@ a:hover {
 	transform: scale(.5);
 	transition: all 0.4s ease-in-out 0s;
 }
+
+.logo svg {
+    filter: url("#dropshadow");
+}
+
 .home .logo h1 {
 	/*position: relative;
 	top: -1px;*/
