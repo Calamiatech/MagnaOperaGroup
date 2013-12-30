@@ -90,11 +90,11 @@
      c0.609,0.318,1.525,0.704,2.758,0.988c0.004-0.008,0.004-0.019,0.008-0.03c0.201,0.045,0.394,0.091,0.605,0.125
      c0.632-2.126,1.188-4.249,1.589-6.16l-2.985-1.222L164.887,117.441z"/>
 </svg>
-     <!--<filter id="dropshadow" x0="-50%" y0="-50%" width="200%" height="200%">
+     <filter id="dropshadow" x0="-50%" y0="-50%" width="200%" height="200%">
           <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
           <feOffset dx="0" dy="0" result="blur" />
           <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-     </filter> -->
+     </filter> 
      <filter id="drop-shadow">
           <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
           <feOffset dx="0" dy="0" result="offsetblur"/>
