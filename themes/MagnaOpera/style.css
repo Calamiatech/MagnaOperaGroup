@@ -90,7 +90,7 @@ a:hover {
 }
 
 .logo svg {
-    filter: url("#dropshadow");
+    /*filter: url("#dropshadow");*/
 }
 
 .home .logo h1 {
@@ -98,7 +98,7 @@ a:hover {
 	top: -1px;*/
 }
 .logo .mainPath {
-	/*filter: url(#dropshadow);*/
+	filter: url("/wp-content/themes/MagnaOpera/images/m-logo.svg#dropshadow");
 }
 .navcontainer:hover .logo {
 	left: 25px;
