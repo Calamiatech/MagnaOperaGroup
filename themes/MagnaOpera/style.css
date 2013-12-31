@@ -100,6 +100,18 @@ a:hover {
 .logo .mainPath {
 	filter: url("/#dropshadow");
 }
+.no-svgfilters .logo .svg { display: none; }
+.no-svgfilters .logo h1 { 
+	background-image: url("http://dev.magnaoperagroup.com/wp-content/themes/MagnaOpera/images/M-logo-transparent-white-dropshadow.png");
+    background-size: 100% auto;
+    height: 200px;
+    width: 200px;
+}
+.no-svgfilters .logo h1 a {
+	display: block;
+	height: 200px;
+	width: 200px;
+}
 .navcontainer:hover .logo {
 	left: 25px;
 }
