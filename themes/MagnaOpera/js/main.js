@@ -7,12 +7,12 @@ $(document).ready(function(){
 	Making swipes work on, well, pretty much everything.
 	*/
 	var swipe_obj = { 
-		swipeLeft: function(event, direction, distance, duration, fingerCount) { api.nextSlide(); }, 
-		swipeRight: function(event, direction, distance, duration, fingerCount) { api.prevSlide(); }
+		swipeLeft: function(event, direction, distance, duration, fingerCount) { console.log(event); api.nextSlide(); }, 
+		swipeRight: function(event, direction, distance, duration, fingerCount) { console.log(event); api.prevSlide(); }
 	};
 	$.fn.swipe.defaults.excludedElements = "button, input, select, textarea, .noSwipe";
 
-	$("*").swipe(swipe_obj);
+	$("#supersized *").swipe(swipe_obj);
 	//$("#supersized a img").swipe(swipe_obj);
 	//$("#slidecaption").swipe(swipe_obj);
 
@@ -20,28 +20,32 @@ $(document).ready(function(){
 	/*
 	Make the MobiMenu fly in / close
 	*/
-	var _showMenu = function(){
+	_showMenu = function(){
 		/* Pause the slideshow when the menu is open, and start it back up when you close it. */
 		api.playToggle();
+		$("#supersized").attr("style","visibility: hidden;").hide();
 		$(".about-contact-page").removeClass("hidden").addClass("show");
-	},
+	};
 	_closeMenu = function(){
 		$(".about-contact-page").removeClass("show").addClass("hidden");
+		$("#supersized").attr("style","visibility: visible;").show();
 		api.playToggle();
-	};
-	var _openMenu = _showMenu; // Alias function name
+	}; 
 
-	$(".mobile-logo").click(function(){ _showMenu(); });
+	$(".mobilenavcontainer").click(function(){ _showMenu(); });
 	$(".mobile.close").add(".mobilenav .closebuttonhitarea")
-		.click(_closeMenu)
-		.swipe({ tap: _closeMenu })
-		;
+		.click(function(){ _closeMenu(); })
+		.swipe({ tap: function(){ _closeMenu(); } })
+	;
+	$(".about-contact-page *").swipe({
+		swipeLeft: function(event, direction, distance, duration, fingerCount) { _closeMenu(); }
+	})
 
 	/*
 	Make the logo into a button for "Easy Access" to the Work Menu on the single-portfolio pages
 	We're unbinding the existing click action and then grabbing the anchor tag and giving it a new href attribute.
 	*/
-	$(".single-portfolio .mobile-logo.logo").unbind("click").find("a").attr("href","#work");
+	$(".single-portfolio .mobile-logo.logo").find("a").attr("href","#work");
 
 
 	/*
