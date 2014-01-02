@@ -1,4 +1,4 @@
-
+;
 
 
 $(document).ready(function(){
@@ -16,24 +16,32 @@ $(document).ready(function(){
 	//$("#supersized a img").swipe(swipe_obj);
 	//$("#slidecaption").swipe(swipe_obj);
 
-	/*
-	Pause the slideshow when the menu is open, and start it back up when you close it.
-	*/
-	$(".mobile-logo.logo").click(function(){ api.playToggle(); });
-	$(".mobile.close").click(function(){ api.playToggle(); })
-
-	/*
-	Make the logo into a Quick Work Page button on the single-portfolio pages
-	*/
-	$(".single-portfolio .mobile-logo.logo").unbind("click").find("a").attr("href","#work");
-
 
 	/*
 	Make the MobiMenu fly in / close
 	*/
-	var toggleMobileMenu = function() { $(".about-contact-page").toggleClass("hidden").toggleClass("show"); };
-	$(".mobile-logo").click(toggleMobileMenu);
-	$(".mobilenav .closebuttonhitarea").click(toggleMobileMenu);
+	var _showMenu = function(){
+		/* Pause the slideshow when the menu is open, and start it back up when you close it. */
+		api.playToggle();
+		$(".about-contact-page").removeClass("hidden").addClass("show");
+	},
+	_closeMenu = function(){
+		$(".about-contact-page").removeClass("show").addClass("hidden");
+		api.playToggle();
+	};
+	var _openMenu = _showMenu; // Alias function name
+
+	$(".mobile-logo").click(function(){ _showMenu(); });
+	$(".mobile.close").add(".mobilenav .closebuttonhitarea")
+		.click(_closeMenu)
+		.swipe({ tap: _closeMenu })
+		;
+
+	/*
+	Make the logo into a button for "Easy Access" to the Work Menu on the single-portfolio pages
+	We're unbinding the existing click action and then grabbing the anchor tag and giving it a new href attribute.
+	*/
+	$(".single-portfolio .mobile-logo.logo").unbind("click").find("a").attr("href","#work");
 
 
 	/*
