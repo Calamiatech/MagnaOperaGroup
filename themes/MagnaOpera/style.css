@@ -1312,10 +1312,10 @@ MOBILE STYLES
 		font-size: 15px;
 		font-style: oblique;
 	}
-	.mobilenav .mobile.menu ul li h2:hover {
+	/*.mobilenav .mobile.menu ul li h2:hover {
 	    border-bottom: 1px solid white;
 		
-	}
+	}*/
 	.mobilenav .mobile.menu a:hover {
 		text-decoration: none;
 	}
