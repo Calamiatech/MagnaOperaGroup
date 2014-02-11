@@ -98,12 +98,7 @@ else : ?>
 	================================================== -->
 <div class="navcontainer" id="navscroll">
     <div class="logo">
-        <h1> <a href="<?php echo home_url(); ?>" class="fulllogo">
-            <?php include(get_stylesheet_directory() . "/images/m-logo.svg"); ?>
-            <?php /* if ( $logo = of_get_option('of_logo') ) { ?>
-            <img src="<?php echo $logo; ?>" alt="<?php bloginfo( 'name' ); ?>" class="scale-with-grid" />
-            <?php } else { bloginfo( 'name' );} */ ?>
-            </a> </h1>
+        <h1> <a href="<?php echo home_url(); ?>" class="fulllogo"><img src="<?php echo content_url(); ?>/themes/MagnaOpera/images/logo_magnaoperagroup.png" alt=""></a> </h1>
     </div>
     <div class="navigation">
         <!--Start Navigation-->

@@ -32,7 +32,7 @@ $(document).ready(function(){
 		api.playToggle();
 	}; 
 
-	$(".mobilenavcontainer").click(function(){ _showMenu(); });
+	$(".static_mobile_logo").click(function(){ _showMenu(); });
 	$(".mobile.close").add(".mobilenav .closebuttonhitarea")
 		.click(function(){ _closeMenu(); })
 		.swipe({ tap: function(){ _closeMenu(); } })
