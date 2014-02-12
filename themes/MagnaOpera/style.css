@@ -78,7 +78,7 @@ a:hover {
 
 .logo {
 	z-index: 9999;
-	top: -25px;
+	top: -10px;
 	margin-left: -35px;
 	margin-bottom: -20px;
 	left: 0px;
@@ -170,7 +170,7 @@ padding: 0px 0px;
 
 .nav {
 	background: rgba(0,0,0,0);
-	padding: 165px 0px 0px 0px;
+	padding: 190px 0px 0px 0px;
 	position: relative;
 	top: 0px;
 	/*animation: hidenav .5s ease-in;
@@ -192,8 +192,8 @@ padding: 0px 0px;
 .home .playcontrols {
 	top: 0px;
 	right: 0px;
-	height: 50px;
-	width: 100px;
+	height: 1px;
+	width: 100%;
 }
 #slidecaption {
 	z-index: 9999 !important;
@@ -1300,7 +1300,7 @@ MOBILE STYLES
 	width: 100%;
 	position: relative;
 	margin: 0 auto;
-	top: -50px;
+	top: -40px;
 }
 .mobilenav .mobile.menu ul {
 	width: 100%;
