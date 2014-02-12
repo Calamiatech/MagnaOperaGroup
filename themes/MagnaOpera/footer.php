@@ -23,8 +23,8 @@
 		</div>
 		<div class="mobile menu">
 			<ul>
-				<li><a id="about_button" class="underline" href="#about_content" onclick="jQuery('#m_about').fadeIn('slow'); jQuery('#about_button').addClass('underline'); jQuery('#m_work').fadeOut('slow'); jQuery('#work_button').removeClass('underline')">About</a></li>
-				<li><a id="work_button" href="#m_work" onclick="jQuery('#m_work').fadeIn('slow'); jQuery('#work_button').addClass('underline'); jQuery('#m_about').fadeOut('slow'); jQuery('#about_button').removeClass('underline')">Work</a></li>
+				<li><a id="about_button" class="underline" href="#" onclick="jQuery('#m_about').fadeIn('fast', function(){ document.location = '#about_content'}); jQuery('#about_button').addClass('underline'); jQuery('#m_work').fadeOut('fast'); jQuery('#work_button').removeClass('underline'); return false;">About</a></li>
+				<li><a id="work_button" href="#" onclick="jQuery('#m_work').fadeIn('fast', function(){ document.location = '#m_work'}); jQuery('#work_button').addClass('underline'); jQuery('#m_about').fadeOut('fast'); jQuery('#about_button').removeClass('underline'); return false">Work</a></li>
 				<li><a href="mailto:info@magnaoperagroup.com" target="_blank">Contact</a></li>
 			</ul>
 
