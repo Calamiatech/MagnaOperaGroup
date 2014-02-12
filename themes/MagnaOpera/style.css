@@ -83,10 +83,10 @@ a:hover {
 	margin-bottom: -20px;
 	left: 0px;
 	position: relative;
-	-webkit-transform: scale(.8);
+	/*-webkit-transform: scale(.8);
 	-ms-transform: scale(.8);
 	-moz-transform: scale(.8);
-	transform: scale(.8);
+	transform: scale(.8);*/
 	transition: all 0.4s ease-in-out 0s;
 }
 
@@ -1310,7 +1310,7 @@ MOBILE STYLES
 }
 .mobilenav .mobile.menu ul li {
 	list-style-type: none;
-	margin: 0 5px;
+	margin: 0 15px;
 	display: inline;
 }
 .mobilenav .mobile.menu ul li h2 {

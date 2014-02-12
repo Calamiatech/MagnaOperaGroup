@@ -23,15 +23,15 @@
 		</div>
 		<div class="mobile menu">
 			<ul>
-				<li><a id="about_button" class="underline" href="#" onclick="jQuery('#m_about').fadeIn('fast', function(){ document.location = '#about_content'}); jQuery('#about_button').addClass('underline'); jQuery('#m_work').fadeOut('fast'); jQuery('#work_button').removeClass('underline'); return false;">About</a></li>
-				<li><a id="work_button" href="#" onclick="jQuery('#m_work').fadeIn('fast', function(){ document.location = '#m_work'}); jQuery('#work_button').addClass('underline'); jQuery('#m_about').fadeOut('fast'); jQuery('#about_button').removeClass('underline'); return false">Work</a></li>
+				<li><a id="about_button" class="underline" href="#about_content" onclick="jQuery('#about').show(); jQuery('#about_button').addClass('underline'); jQuery('#work').hide(); jQuery('#work_button').removeClass('underline'); $('html, body').animate({ scrollTop: 145 }, 500); return false;">About</a></li>
+				<li><a id="work_button" href="#work_content" onclick="jQuery('#work').show(); jQuery('#work_button').addClass('underline'); jQuery('#about').hide(); jQuery('#about_button').removeClass('underline');jQuery('#work_button').removeClass('underline'); $('html, body').animate({ scrollTop: 145 }, 500); return false;">Work</a></li>
 				<li><a href="mailto:info@magnaoperagroup.com" target="_blank">Contact</a></li>
 			</ul>
 
 		</div>
 	</div>
 	<a name="about_content"></a>
-	<div id="m_about" class="mobile content about" style="overflow: auto; display: block;">
+	<div id="about" class="mobile content about" style="overflow: auto; display: block;">
 		<?php
 		$about_page_id = 2;
 		$about_page = get_post($about_page_id);
@@ -51,8 +51,8 @@
 		echo $content;
 		?>
 	</div>
-	<a name="m_work"></a>
-	<div id="m_work" class="mobile content work">
+	<a name="work_content"></a>
+	<div id="work" class="mobile content work">
 		<!-- Project Container -->
 		<div id="workcontainer" class="mobile projects works">
 			<?php  
