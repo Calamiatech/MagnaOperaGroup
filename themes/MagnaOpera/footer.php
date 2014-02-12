@@ -23,14 +23,15 @@
 		</div>
 		<div class="mobile menu">
 			<ul>
-				<li><a href="#" onclick="jQuery('#about').fadeIn('slow'); jQuery('#work').fadeOut('slow');">About</a></li>
-				<li><a href="#" onclick="jQuery('#work').fadeIn('slow'); jQuery('#about').fadeOut('slow');">Work</a></li>
+				<li><a id="about_button" class="underline" href="#about_content" onclick="jQuery('#m_about').fadeIn('slow'); jQuery('#about_button').addClass('underline'); jQuery('#m_work').fadeOut('slow'); jQuery('#work_button').removeClass('underline')">About</a></li>
+				<li><a id="work_button" href="#m_work" onclick="jQuery('#m_work').fadeIn('slow'); jQuery('#work_button').addClass('underline'); jQuery('#m_about').fadeOut('slow'); jQuery('#about_button').removeClass('underline')">Work</a></li>
 				<li><a href="mailto:info@magnaoperagroup.com" target="_blank">Contact</a></li>
 			</ul>
 
 		</div>
 	</div>
-	<div id="about" class="mobile content about" style="overflow: auto; display: block;">
+	<a name="about_content"></a>
+	<div id="m_about" class="mobile content about" style="overflow: auto; display: block;">
 		<?php
 		$about_page_id = 2;
 		$about_page = get_post($about_page_id);
@@ -50,7 +51,8 @@
 		echo $content;
 		?>
 	</div>
-	<div id="work" class="mobile content work">
+	<a name="m_work"></a>
+	<div id="m_work" class="mobile content work">
 		<!-- Project Container -->
 		<div id="workcontainer" class="mobile projects works">
 			<?php  

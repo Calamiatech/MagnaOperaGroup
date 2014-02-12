@@ -1290,7 +1290,7 @@ MOBILE STYLES
 	width: 100% !important;
 }
 .mobilenav {
-	height: 180px;
+	height: 120px;
 	width: 100%;
 	top: 5px;
 	position: relative;
@@ -1366,10 +1366,10 @@ MOBILE STYLES
 	margin: 0 auto;
 	position: relative;
 
-	-webkit-transform: scale(.3);
-	-ms-transform: scale(.3);
-	-moz-transform: scale(.3);
-	transform: scale(.3);
+	-webkit-transform: scale(.5);
+	-ms-transform: scale(.5);
+	-moz-transform: scale(.5);
+	transform: scale(.5);
 	/* -webkit-transform: scale(0.5); */
 }
 .about-contact-page .mobile.logo a {
@@ -1384,10 +1384,10 @@ MOBILE STYLES
 }
 .mobile.close {
 	position: absolute;
-	top: 10px;
-	right: 10px;
-	height: 40px;
-	width: 40px;
+	top: 0px;
+	right: 0px;
+	height: 38px;
+	width: 38px;
 	/* border: 1px solid white; */
 	border-radius: 50%;
 	cursor: pointer;
@@ -1434,7 +1434,7 @@ MOBILE STYLES
 }
 .about-contact-page .mobile.content.about {
 	top: 0px;
-	padding-top: 200px;
+	padding-top: 150px;
 }
 
 #portfoliocontainer.mobile {
@@ -1627,9 +1627,22 @@ MOBILE STYLES
 }
 .mobile.close a {
 	text-decoration: none;
-	font-size: 30px;
-	display: block;width: 50px;
-	height: 50px;
+	font-size: 60px;
+	display: block;
+	width: 48px;
+	height: 48px;
 	text-align: center;
-	line-height: 50px;
+	line-height: 48px;
+	width: auto;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.mobile.menu li a {
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 18px;
+	font-family: "adobe-caslon-pro",serif !important;
 }
