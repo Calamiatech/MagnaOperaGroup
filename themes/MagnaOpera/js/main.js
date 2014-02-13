@@ -37,9 +37,9 @@ $(document).ready(function(){
 		.click(function(){ _closeMenu(); })
 		.swipe({ tap: function(){ _closeMenu(); } })
 	;
-	$(".about-contact-page *").swipe({
+	/*$(".about-contact-page *").swipe({
 		swipeLeft: function(event, direction, distance, duration, fingerCount) { _closeMenu(); }
-	})
+	})*/
 
 	/*
 	Make the logo into a button for "Easy Access" to the Work Menu on the single-portfolio pages

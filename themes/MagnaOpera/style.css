@@ -1645,7 +1645,7 @@ MOBILE STYLES
 }
 
 .underline {
-	text-decoration: underline;
+	text-decoration: underline!important;
 }
 
 .mobile.menu li a {

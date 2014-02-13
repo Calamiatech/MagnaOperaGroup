@@ -23,7 +23,7 @@
 		</div>
 		<div class="mobile menu">
 			<ul>
-				<li><a id="about_button" class="underline" href="#about_content" onclick="jQuery('#about').show(); jQuery('#about_button').addClass('underline'); jQuery('#work').hide(); jQuery('#work_button').removeClass('underline'); jQuery('html, body').animate({ scrollTop: 145 }, 500); return false;">About</a></li>
+				<li><a id="about_button" class="underline" href="#about_content" onclick="jQuery('#about_button').addClass('underline');jQuery('#about').show();  jQuery('#work').hide(); jQuery('#work_button').removeClass('underline'); jQuery('html, body').animate({ scrollTop: 145 }, 500); return false;">About</a></li>
 				<li><a id="work_button" href="#work_content" onclick="jQuery('#work').show(); jQuery('#work_button').addClass('underline'); jQuery('#about').hide(); jQuery('#about_button').removeClass('underline'); jQuery('html, body').animate({ scrollTop: 145 }, 500); return false;">Work</a></li>
 				<li><a href="mailto:info@magnaoperagroup.com" target="_blank">Contact</a></li>
 			</ul>
