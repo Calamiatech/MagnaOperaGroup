@@ -1648,9 +1648,12 @@ MOBILE STYLES
 	text-decoration: underline;
 }
 
-.mobile.menu li a {
+.mobile.menu li, .mobile.menu li a {
 	text-transform: uppercase;
 	font-style: italic;
 	font-size: 18px;
 	font-family: "adobe-caslon-pro",serif !important;
+	color: #fff;
+	z-index: 99999;
+	cursor: pointer;
 }
