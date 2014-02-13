@@ -23,8 +23,49 @@
 		</div>
 		<div class="mobile menu">
 			<ul>
-				<li><a id="about_button" class="underline" href="#about_content" onclick="jQuery('#work').css('display','none'); jQuery('#about').css('display', 'block');  jQuery('#work_button').removeClass('underline'); jQuery('#about_button').addClass('underline'); jQuery('html, body').animate({ scrollTop: 145 }, 200); return false;">About</a></li>
-				<li><a id="work_button" href="#work_content" onclick="jQuery('#about').css('display','none'); jQuery('#work').css('display', 'block'); jQuery('#about_button').removeClass('underline'); jQuery('#work_button').addClass('underline'); jQuery('html, body').animate({ scrollTop: 145 }, 200); return false;">Work</a></li>
+				<script language="javascript">
+				$(document).ready(function(){
+					var menu = {
+						about_button: jQuery("#about_button"),
+						about: jQuery("#about"),
+						work_button: jQuery("#work_button"),
+						work: jQuery("#work"),
+						underline: "underline"
+					};
+
+					function show(panel) {
+						switch (panel){
+							case "about":
+								menu.about.show();
+								menu.work.hide();
+								menu.about_button.addClass(menu.underline);
+								menu.work_button.removeClass(menu.underline);
+								break;
+							case "work":
+								menu.work.show();
+								menu.about.hide();
+								menu.work_button.addClass(menu.underline);
+								menu.about_button.removeClass(menu.underline);
+								break;
+							default:
+								break;
+						}
+					}
+
+					menu.about_button.click( function(e) {
+						e.preventDefault();
+						show("about");
+						jQuery("html, body").animate({ scrollTop: 145 }, 200);
+					});
+					menu.work_button.click( function(e) {
+						e.preventDefault();
+						show("work");
+						jQuery("html, body").animate({ scrollTop: 175 }, 200);
+					});
+				});
+				</script>
+				<li><a id="about_button" class="underline" href="#about_content">About</a></li>
+				<li><a id="work_button" href="#work_content">Work</a></li>
 				<li><a href="mailto:info@magnaoperagroup.com" target="_blank">Contact</a></li>
 			</ul>
 
