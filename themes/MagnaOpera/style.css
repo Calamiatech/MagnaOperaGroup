@@ -1408,14 +1408,22 @@ MOBILE STYLES
 	-webkit-transform: rotate(-45deg);
 }
 .mobilenav .closebuttonhitarea {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	display: block;
-	/*height: 100px;
-	width: 100px;*/
-	z-index: 999999;
+    display: block;
+    height: 48px;
+    line-height: 48px;
+    margin: 0 !important;
+    overflow: hidden;
+    padding: 0 !important;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 48px;
+    z-index: 999999;
 }
+
+
+
+
 .about-contact-page .mobile.content {
 	display: none;
 	position: absolute;
