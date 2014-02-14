@@ -35,7 +35,7 @@
 						underline: "underline"
 					};
 
-					function show(panel) {
+					window.show = function(panel) {
 						switch (panel){
 							case "about":
 								menu.about.show();
@@ -58,11 +58,28 @@
 						show("about");
 						jQuery("html, body").animate({ scrollTop: 145 }, 200);
 					});
+					menu.about_li.click( function(e){
+						e.stopPropagation;
+						show("about");
+						jQuery("html, body").animate({scrollTop: 145 }, 200);
+					});
+					menu.about_li.swipe({tap:function(e,t){ show("about"); jQuery("html, body").animate({ scrollTop: 145}, 200); }});
 					menu.work_button.click( function(e) {
 						e.preventDefault();
 						show("work");
 						jQuery("html, body").animate({ scrollTop: 175 }, 200);
 					});
+					menu.work_li.click( function(e){
+						e.stopPropagation;
+						show("work");
+						jQuery("html, body").animate({scrollTop: 145 }, 200);
+					});
+					menu.about_li.swipe({
+						tap:function(e,t){ 
+							show("about"); 
+							jQuery("html, body").animate({ scrollTop: 175}, 200); 
+						}});
+
 				});
 				</script>
 				<li id="about_li"><a id="about_button" class="underline" href="#about_content">About</a></li>
