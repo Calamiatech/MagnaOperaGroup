@@ -25,9 +25,11 @@
 			<ul>
 				<script language="javascript">
 				$(document).ready(function(){
-					var menu = {
+					window.menu = {
+						about_li: jQuery("#about_li"),
 						about_button: jQuery("#about_button"),
 						about: jQuery("#about"),
+						work_li: jQuery("#work_li"),
 						work_button: jQuery("#work_button"),
 						work: jQuery("#work"),
 						underline: "underline"
@@ -51,7 +53,6 @@
 								break;
 						}
 					}
-
 					menu.about_button.click( function(e) {
 						e.preventDefault();
 						show("about");
@@ -64,8 +65,8 @@
 					});
 				});
 				</script>
-				<li><a id="about_button" class="underline" href="#about_content">About</a></li>
-				<li><a id="work_button" href="#work_content">Work</a></li>
+				<li id="about_li"><a id="about_button" class="underline" href="#about_content">About</a></li>
+				<li id="work_li"><a id="work_button" href="#work_content">Work</a></li>
 				<li><a href="mailto:info@magnaoperagroup.com" target="_blank">Contact</a></li>
 			</ul>
 
