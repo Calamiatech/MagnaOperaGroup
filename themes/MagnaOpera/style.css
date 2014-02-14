@@ -1310,7 +1310,8 @@ MOBILE STYLES
 }
 .mobilenav .mobile.menu ul li {
 	list-style-type: none;
-	margin: 0 15px;
+	padding: 20px;
+	margin: 0 10px;
 	display: inline;
 }
 .mobilenav .mobile.menu ul li h2 {
